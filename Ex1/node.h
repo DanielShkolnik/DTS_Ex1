@@ -1,8 +1,24 @@
-//
-// Created by danie on 28/11/2019.
-//
+#ifndef NODE_H_
+#define NODE_H_
 
-#ifndef DTS_WET_NODE_H
-#define DTS_WET_NODE_H
+template <class K, class D>
+class Node{
+private :
+    K key;
+    D data;
+    *Node left;
+    *Node right;
+    int height;
+public:
+    Node()= default;
+    Node(K key, D data);
+    ~Node();
+    Node(const Node& node);
+    Node& operator=(const Node& node);
+    void calcHeight();
+    void setLeft(const Node& left);
+    void setRight(const Node& right);
+    int getHeight();
+}
 
-#endif //DTS_WET_NODE_H
+#endif
