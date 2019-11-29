@@ -22,3 +22,43 @@ Node<K,D>& Avl<K,D>::find_nearest(K key) {
     }
     return prev_node;
 }
+template <class K, class D>
+void Avl<K,D>::rotateLL(const Node<K,D>& B){
+    Node<K,D>& A = B.getLeft();
+    Node<K,D>& A_right = A.getRight();
+    A.setRight(B);
+    B.setLeft(A_right);
+}
+
+template <class K, class D>
+void Avl<K,D>::rotateLR(const Node<K,D>& C){
+    Node<K,D>& B = C.getLeft();
+    Node<K,D>& A = B.getRight();
+    Node<K,D>& A_left = A.getLeft();
+    Node<K,D>& A_right = A.getRight();
+    A.setLeft(B);
+    B.setRight(A_left);
+    A.setRight(C);
+    C.setLeft(A_right);
+}
+template <class K, class D>
+Node<K,D>& Avl<K,D>::find(const K& key){
+    Node<K,D>& nearest = this->find_nearest(key);
+    if(nearest== nullptr || nearest.getKey() != key){
+        throw Avl<K,D>::KeyNotFound(); //empty tree
+    }
+    if(nearest.getKey()==key)
+        return nearest;
+}
+
+template <class K, class D>
+void Avl<K,D>::delete_element(const K& key){
+    Node<K,D>& nearest = this->find_nearest(key);
+    if(nearest.getKey()!=key) throw Avl<K,D>::KeyNotFound();
+    Node<K,D>& current = nearest;
+    while (current){
+        int prev_height = current.getHeight();
+        current.calcHeight();
+        //int BF = current.get
+    }
+}
