@@ -12,9 +12,9 @@ private :
 public:
     Node()= default;
     Node(K key, D data);
-    ~Node();
-    Node(const Node& node);
-    Node<K,D>& operator=(const Node& node);
+    ~Node()= default;
+    Node(const Node& node)= default;
+    Node<K,D>& operator=(const Node& node)= default;
     void calcHeight();
     void setLeft(const Node& left);
     void setRight(const Node& right);
