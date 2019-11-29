@@ -52,6 +52,11 @@ Node<K,D>& Node<K,D>::getPapa() const{
     return this->papa;
 }
 
+template <class K, class D>
+void Node<K,D>::setPapa(const Node<K,D>& papa){
+    this->papa=papa;
+}
+
 int max(int a, int b){
     if (a>b) return a;
     return b;
