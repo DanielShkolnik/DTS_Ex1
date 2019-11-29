@@ -197,31 +197,35 @@ int Avl<K,D>::getBF(std::shared_ptr<Node<K,D>> node){
 
 template <class K, class D>
 void Avl<K,D>::fix_BFs(std::shared_ptr<Node<K,D>> leaf){
-    std::shared_ptr<Node<K,D>> current = leaf;
+    std::shared_ptr<Node<K,D>> current = leaf->getPapa();
+    if(current == nullptr) return;
     while (current){
         int prev_height = current->getHeight();
         current->calcHeight();
-        if(prev_height == current->getHeight()){
+        std::shared_ptr<Node<K,D>> prev = current;
+        current = current->getPapa();
+
+        if(prev_height == prev->getHeight()){
             return;
         }
-        int BF = this->getBF(current);
+        int BF = this->getBF(prev);
         //LL
-        if(BF == 2 && this->getBF(current->getLeft())>=0){
-            this->rotateLL(current);
+        if(BF == 2 && this->getBF(prev->getLeft())>=0){
+            this->rotateLL(prev);
         }
         //LR
-        if(BF == 2 && this->getBF(current->getLeft())==-1){
-            this->rotateLR(current);
+        else if(BF == 2 && this->getBF(prev->getLeft())==-1){
+            this->rotateLR(prev);
         }
         //RL
-        if(BF==-2 && this->getBF(current->getRight())==1){
-            this->rotateRL(current);
+        else if(BF==-2 && this->getBF(prev->getRight())==1){
+            this->rotateRL(prev);
         }
         //RR
-        if(BF==-2 && this->getBF(current->getRight())<=0){
-            this->rotateRR(current);
+        else if(BF==-2 && this->getBF(prev->getRight())<=0){
+            this->rotateRR(prev);
         }
-        current = current->getPapa();
+
     }
 }
 

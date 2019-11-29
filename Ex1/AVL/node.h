@@ -17,7 +17,7 @@ public:
     ~Node()= default;
     Node(const Node&)= delete;
     std::shared_ptr<Node> operator=(const Node&)= delete;
-    void calcHeight();
+    friend int calcHeight();
     void setLeft(std::shared_ptr<Node<K,D>>& left);
     void setRight(std::shared_ptr<Node<K,D>>& right);
     int getHeight() const;
@@ -27,6 +27,7 @@ public:
     std::shared_ptr<Node> getRight() const;
     std::shared_ptr<Node> getPapa() const;
     void setPapa(std::shared_ptr<Node> papa);
+    bool isLeaf();
 
 };
 
@@ -40,11 +41,20 @@ Node<K,D>::Node(K key, D data, std::shared_ptr<Node<K,D>> papa):key(key),data(da
 
 
 template <class K, class D>
-void Node<K,D>::calcHeight(){
+int calcHeight(const std::shared_ptr<Node<K,D>>& node){
+    if(node == nullptr){
+        return 0;
+    }
+    int max_left = calcHeight(node->getLeft()) + 1;
+    int max_right = calcHeight(node->getRight()) + 1;
+    node->height =
+    return  this-height;
+    /*
     if(this->left== nullptr && this->right== nullptr)this->height = 1;
     else if(this->left== nullptr) this->height = this->right->height +1;
     else if(this->right== nullptr) this->height = this->left->height +1;
     else this->height= max(this->left->height,this->right->height) + 1;
+     */
 }
 
 template <class K, class D>
@@ -92,6 +102,9 @@ void Node<K,D>::setPapa(std::shared_ptr<Node<K,D>> papa){
     this->papa= papa;
 }
 
-
+template <class K, class D>
+bool Node<K,D>::isLeaf() {
+    return  (this->getRight() == nullptr && this->getLeft() == nullptr);
+}
 
 #endif
