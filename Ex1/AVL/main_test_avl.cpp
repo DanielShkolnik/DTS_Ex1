@@ -15,7 +15,7 @@ int main() {
       a.insert(8,3);
       a.insert(9,3);
       inorder(a.getHead(),print_key);
-      std::cout<<"finito"<<std::endl;
+      std::cout<<" Finito Pappie"<<std::endl;
    }
    catch(Avl<int,int>::KeyExists err) {
       std::cout<<"key exists"<<std::endl;
