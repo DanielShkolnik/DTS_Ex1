@@ -1,6 +1,10 @@
 #include <iostream>
+#include "avl.h"
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Avl<int,int>() avl;
+    avl.insert(10,0);
+
     return 0;
 }
