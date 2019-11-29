@@ -8,9 +8,9 @@ class Avl{
 private:
     std::shared_ptr<Node<K,D>> head;
     std::shared_ptr<Node<K,D>> find_nearest(K key);
-    void fix_BFs(Node<K,D>& leaf); //CHANGE TO SMART PTR
-    bool is_left_son(const Node<K,D>& node);
-
+    void fix_BFs(std::shared_ptr<Node<K,D>> leaf); //CHANGE TO SMART PTR
+    bool is_left_son(std::shared_ptr<Node<K,D>> node);
+    void update_head(std::shared_ptr<Node<K,D>> node);
 public:
     Avl():head(nullptr){}
     ~Avl()= default;
@@ -18,12 +18,13 @@ public:
     Avl& operator=(const Avl& avl)= delete;
     void insert(const K& key, const D& data); // Daniel
     void delete_element(const K& key); // Omer
-    Node<K,D>& find(const K& key); // Omer
-    int getBF(const Node<K,D>& node); // Dainel
-    void rotateLL(const Node<K,D>& node); // Omer
-    void rotateLR(const Node<K,D>& node); // Omer
-    void rotateRL(const Node<K,D>& node); // Daniel
-    void rotateRR(const Node<K,D>& node); // Daniel
+    std::shared_ptr<Node<K,D>> find(const K& key); // Omer
+    std::shared_ptr<Node<K,D>> getHead();
+    int getBF(std::shared_ptr<Node<K,D>> node); // Dainel
+    void rotateLL(std::shared_ptr<Node<K,D>> node); // Omer
+    void rotateLR(std::shared_ptr<Node<K,D>> node); // Omer
+    void rotateRL(std::shared_ptr<Node<K,D>> node); // Daniel
+    void rotateRR(std::shared_ptr<Node<K,D>> node); // Daniel
 
     class KeyExists{};
     class KeyNotFound{};
@@ -31,22 +32,23 @@ public:
 
 template <class K, class D>
 void Avl<K,D>::insert(const K& key, const D& data){
-    Node<K,D>& nearest_node=this->find_nearest(key);
-    if (nearest_node.getKey()==key) throw Avl<K,D>::KeyExists();
+    std::shared_ptr<Node<K,D>> nearest_node=this->find_nearest(key);
     std::shared_ptr<Node<K,D>> new_node_ptr = std::shared_ptr<Node<K,D>>(new Node<K,D>(key,data,nearest_node));
-    if(&nearest_node == nullptr){
+    if(nearest_node == nullptr){
         this->head=new_node_ptr;
         return;
     }
-    if (key>nearest_node.getKey()) nearest_node.setRight(new_node_ptr);
-    if (key<nearest_node.getKey()) nearest_node.setLeft(new_node_ptr);
+    if (nearest_node->getKey()==key) throw Avl<K,D>::KeyExists();
+    if (key>nearest_node->getKey()) nearest_node->setRight(new_node_ptr);
+    if (key<nearest_node->getKey()) nearest_node->setLeft(new_node_ptr);
     this->fix_BFs(new_node_ptr);
+    this->update_head(new_node_ptr);
 }
 
 // gets the key and returns element with the nearest existing key
 template <class K, class D>
 std::shared_ptr<Node<K,D>> Avl<K,D>::find_nearest(K key) {
-    if(this->head == nullptr) return nullptr; // avl is empty.
+    if(this->head == nullptr) return nullptr; // avl is empty->
     std::shared_ptr<Node<K,D>> current_node = this->head;
     std::shared_ptr<Node<K,D>> prev_node = this->head;
     while (current_node){
@@ -62,160 +64,173 @@ std::shared_ptr<Node<K,D>> Avl<K,D>::find_nearest(K key) {
     return prev_node;
 }
 template <class K, class D>
-void Avl<K,D>::rotateLL(const Node<K,D>& B){
-    Node<K,D>& A = B.getLeft();
-    Node<K,D>& A_right = A.getRight();
-    A.setRight(B);
-    B.setLeft(A_right);
+void Avl<K,D>::rotateLL(std::shared_ptr<Node<K,D>> B){
+    std::shared_ptr<Node<K,D>> A = B->getLeft();
+    std::shared_ptr<Node<K,D>> A_right = A->getRight();
+    A->setRight(B);
+    B->setLeft(A_right);
 }
 
 template <class K, class D>
-void Avl<K,D>::rotateLR(const Node<K,D>& C){
-    Node<K,D>& B = C.getLeft();
-    Node<K,D>& A = B.getRight();
-    Node<K,D>& A_left = A.getLeft();
-    Node<K,D>& A_right = A.getRight();
-    A.setLeft(B);
-    B.setRight(A_left);
-    A.setRight(C);
-    C.setLeft(A_right);
+void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
+    std::shared_ptr<Node<K,D>> B = C->getLeft();
+    std::shared_ptr<Node<K,D>> A = B->getRight();
+    std::shared_ptr<Node<K,D>> A_left = A->getLeft();
+    std::shared_ptr<Node<K,D>> A_right = A->getRight();
+    A->setLeft(B);
+    B->setRight(A_left);
+    A->setRight(C);
+    C->setLeft(A_right);
 }
 template <class K, class D>
-Node<K,D>& Avl<K,D>::find(const K& key){
-    Node<K,D>& nearest = this->find_nearest(key);
-    if(nearest== nullptr || nearest.getKey() != key){
+std::shared_ptr<Node<K,D>> Avl<K,D>::find(const K& key){
+    std::shared_ptr<Node<K,D>> nearest = this->find_nearest(key);
+    if(nearest== nullptr || nearest->getKey() != key){
         throw Avl<K,D>::KeyNotFound(); //empty tree
     }
-    if(nearest.getKey()==key)
+    if(nearest->getKey()==key)
         return nearest;
 }
 
 template <class K, class D>
 void Avl<K,D>::delete_element(const K& key){
-    Node<K,D>& nearest = this->find_nearest(key);
-    if(nearest== nullptr || nearest.getKey()!=key) throw Avl<K,D>::KeyNotFound();
+    std::shared_ptr<Node<K,D>> nearest = this->find_nearest(key);
+    if(nearest== nullptr || nearest->getKey()!=key) throw Avl<K,D>::KeyNotFound();
     //leaf
-    if(nearest.getRight()== nullptr && nearest.getLeft()== nullptr){
+    if(nearest->getRight()== nullptr && nearest->getLeft()== nullptr){
         if(is_left_son(nearest)){
-            nearest.getPapa().setLeft(nullptr);
+            nearest->getPapa()->setLeft(nullptr);
         }
         else{
-            nearest.getPapa().setRight(nullptr);
+            nearest->getPapa()->setRight(nullptr);
         }
     }
         //no right son
-    else if(nearest.getRight()== nullptr){
+    else if(nearest->getRight()== nullptr){
         if(is_left_son(nearest)){
-            nearest.getPapa().setLeft(nearest.getLeft());
+            nearest->getPapa()->setLeft(nearest->getLeft());
         }
         else{
-            nearest.getPapa().setRight(nearest.getLeft());
+            nearest->getPapa()->setRight(nearest->getLeft());
         }
         // update papa after switch
-        nearest.getLeft().setPapa(nearest.getPapa());
+        nearest->getLeft()->setPapa(nearest->getPapa());
     }
-        //find the right left left... son
+        //find the right left left->->-> son
     else{
-        Node<K,D>& current = nearest.getRight();
-        while (current.getLeft()!= nullptr){
-            current = current.getLeft();
+        std::shared_ptr<Node<K,D>> current = nearest->getRight();
+        while (current->getLeft()!= nullptr){
+            current = current->getLeft();
         }
         if(is_left_son(nearest)){
-            nearest.getPapa().setLeft(current);
+            nearest->getPapa()->setLeft(current);
         }
         else{
-            nearest.getPapa().setRight(current);
+            nearest->getPapa()->setRight(current);
         }
-        current.setLeft(nearest.getLeft());
-        current.setPapa(nearest.getPapa());
+        current->setLeft(nearest->getLeft());
+        current->setPapa(nearest->getPapa());
     }
+    this->update_head(nearest); // get the root from the deleted node
     delete nearest;
 }
 template <class K, class D>
-bool Avl<K,D>::is_left_son(const Node<K,D>& node){
-    return node.getPapa().getLeft().getKey()==node.getKey();
+bool Avl<K,D>::is_left_son(std::shared_ptr<Node<K,D>> node){
+    return node->getPapa()->getLeft()->getKey()==node->getKey();
 }
 template <class K, class D>
-void Avl<K,D>::rotateRR(const Node<K,D>& B){
-    Node<K,D>& A=B.getRight();
-    Node<K,D>& A_left=A.getLeft();
-    A.setLeft(B);
-    B.setRight(A_left);
-}
-
-template <class K, class D>
-void Avl<K,D>::rotateRL(const Node<K,D>& C){
-    Node<K,D>& B=C.getRight();
-    Node<K,D>& A=B.getLeft();
-    Node<K,D>& A_left=A.getLeft();
-    Node<K,D>& A_right=A.getRight();
-    A.setLeft(C);
-    C.setRight(A_left);
-    A.setRight(B);
-    B.setLeft(A_right);
+void Avl<K,D>::rotateRR(std::shared_ptr<Node<K,D>> B){
+    std::shared_ptr<Node<K,D>> A=B->getRight();
+    std::shared_ptr<Node<K,D>> A_left=A->getLeft();
+    A->setLeft(B);
+    B->setRight(A_left);
 }
 
 template <class K, class D>
-int Avl<K,D>::getBF(const Node<K,D>& node){
-    return node.getLeft().getHeight()-node.getRight().getHeight();
+void Avl<K,D>::rotateRL(std::shared_ptr<Node<K,D>> C){
+    std::shared_ptr<Node<K,D>> B=C->getRight();
+    std::shared_ptr<Node<K,D>> A=B->getLeft();
+    std::shared_ptr<Node<K,D>> A_left=A->getLeft();
+    std::shared_ptr<Node<K,D>> A_right=A->getRight();
+    A->setLeft(C);
+    C->setRight(A_left);
+    A->setRight(B);
+    B->setLeft(A_right);
+}
+
+template <class K, class D>
+int Avl<K,D>::getBF(std::shared_ptr<Node<K,D>> node){
+    if(node->getLeft()== nullptr && node->getRight()== nullptr) return 0; // leaf
+    else if(node->getRight()==nullptr) return node->getLeft()->getHeight(); // no right son
+    else if(node->getLeft()==nullptr) return -(node->getRight()->getHeight()); // // no left son
+    return node->getLeft()->getHeight()-node->getRight()->getHeight();
 }
 
 
 
 template <class K, class D>
-void Avl<K,D>::fix_BFs(Node<K,D>& leaf){
-    Node<K,D>& current = leaf;
+void Avl<K,D>::fix_BFs(std::shared_ptr<Node<K,D>> leaf){
+    std::shared_ptr<Node<K,D>> current = leaf;
     while (current){
-        int prev_height = current.getHeight();
-        current.calcHeight();
-        if(prev_height == current.getHeight()){
+        int prev_height = current->getHeight();
+        current->calcHeight();
+        if(prev_height == current->getHeight()){
             return;
         }
         int BF = this->getBF(current);
         //LL
-        if(BF == 2 && this->getBF(current.getLeft())>=0){
+        if(BF == 2 && this->getBF(current->getLeft())>=0){
             this->rotateLL(current);
         }
         //LR
-        if(BF == 2 && this->getBF(current.getLeft())==-1){
+        if(BF == 2 && this->getBF(current->getLeft())==-1){
             this->rotateLR(current);
         }
         //RL
-        if(BF==-2 && this->getBF(current.getRight())==1){
+        if(BF==-2 && this->getBF(current->getRight())==1){
             this->rotateRL(current);
         }
         //RR
-        if(BF==-2 && this->getBF(current.getRight())<=0){
+        if(BF==-2 && this->getBF(current->getRight())<=0){
             this->rotateRR(current);
         }
-        current = current.getPapa();
+        current = current->getPapa();
     }
 }
 
 
 template <class K, class D, class P>
-void inorder(Node<K,D>& node, P predicate){
+void inorder(std::shared_ptr<Node<K,D>> node, P predicate){
     if (node== nullptr) return;
-    inorder(node.getLeft(),predicate);
+    inorder(node->getLeft(),predicate);
     predicate(node);
-    inorder(node.getRight(),predicate);
+    inorder(node->getRight(),predicate);
 }
 
 template <class K, class D, class P>
-void preorder(Node<K,D>& node, P predicate){
+void preorder(std::shared_ptr<Node<K,D>> node, P predicate){
     if (node== nullptr) return;
     predicate(node);
-    preorder(node.getLeft(),predicate);
-    preorder(node.getRight(),predicate);
+    preorder(node->getLeft(),predicate);
+    preorder(node->getRight(),predicate);
 }
 
 template <class K, class D, class P>
-void postorder(Node<K,D>& node, P predicate){
+void postorder(std::shared_ptr<Node<K,D>> node, P predicate){
     if (node== nullptr) return;
-    postorder(node.getLeft(),predicate);
-    postorder(node.getRight(),predicate);
+    postorder(node->getLeft(),predicate);
+    postorder(node->getRight(),predicate);
     predicate(node);
 }
-
-
+template <class K, class D>
+std::shared_ptr<Node<K,D>> Avl<K,D>::getHead(){
+    return this->head;
+}
+template <class K, class D>
+void Avl<K,D>::update_head(std::shared_ptr<Node<K,D>> node){
+    while(node->getPapa() != nullptr){
+        node = node->getPapa();
+    }
+    this->head = node;
+}
 #endif
