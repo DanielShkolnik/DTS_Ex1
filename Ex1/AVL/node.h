@@ -15,7 +15,7 @@ public:
     ~Node();
     Node(const Node& node);
     Node<K,D>& operator=(const Node& node);
-    void calcHeight();
+    int calcHeight();
     void setLeft(const Node& left);
     void setRight(const Node& right);
     int getHeight();

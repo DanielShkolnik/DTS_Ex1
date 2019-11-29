@@ -19,11 +19,23 @@ template <class K, class D>
 Node<K,D>::Node(const Node& node){
 
 }
-void calcHeight(){
-    return this.height;
+
+
+
+template <class K, class D>
+int Node<K,D>::calcHeight(){
+    return Node<K,D>::left->height + Node<K,D>::right->height + 1;
 }
-void setLeft(const Node& left);
-void setRight(const Node& right);
+
+template <class K, class D>
+void Node<K,D>::setLeft(const Node& left){
+    Node<K,D>::left=left;
+}
+
+template <class K, class D>
+void Node<K,D>::setRight(const Node& right){
+    Node<K,D>::right=right;
+}
 
 template <class K, class D>
 int Node<K,D>::getHeight(){
