@@ -4,7 +4,7 @@
 
 #include "node.h"
 template <class K, class D>
-Node<K,D>::Node(K key, D data):key(key),data(data){}
+Node<K,D>::Node(K key, D data, const Node<K,D>& papa):key(key),data(data),papa(papa){}
 
 
 template <class K, class D>

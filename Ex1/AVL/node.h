@@ -8,10 +8,11 @@ private :
     D data;
     Node* left;
     Node* right;
+    Node* papa;
     int height;
 public:
     Node()= default;
-    Node(K key, D data);
+    Node(K key, D data,const Node<K,D>& papa);
     ~Node()= default;
     Node(const Node<K,D>& node)= default;
     Node<K,D>& operator=(const Node<K,D>& node)= default;
