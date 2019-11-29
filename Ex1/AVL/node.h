@@ -6,8 +6,8 @@ class Node{
 private :
     K key;
     D data;
-    *Node left;
-    *Node right;
+    Node* left;
+    Node* right;
     int height;
 public:
     Node()= default;
@@ -19,6 +19,6 @@ public:
     void setLeft(const Node& left);
     void setRight(const Node& right);
     int getHeight();
-}
+};
 
 #endif
