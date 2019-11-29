@@ -1,5 +1,3 @@
-
-
 #ifndef AVL_H_
 #define AVL_H_
 
