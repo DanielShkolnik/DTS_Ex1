@@ -8,7 +8,7 @@ Node<K,D>::Node(K key, D data):key(key),data(data){}
 
 
 template <class K, class D>
-int Node<K,D>::calcHeight(){
+void Node<K,D>::calcHeight(){
     return Node<K,D>::left->height + Node<K,D>::right->height + 1;
 }
 
