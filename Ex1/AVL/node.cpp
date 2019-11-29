@@ -37,6 +37,18 @@ const D& Node<K,D>::getData() const{
     return this->data;
 }
 
+template <class K, class D>
+const Node<K,D>& Node<K,D>::getLeft() const{
+    return this->left;
+}
+
+
+template <class K, class D>
+const Node<K,D>& Node<K,D>::getRight() const{
+    return this->right;
+}
+
+
 int max(int a, int b){
     if (a>b) return a;
     return b;
