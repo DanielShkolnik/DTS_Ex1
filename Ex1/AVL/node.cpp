@@ -8,6 +8,6 @@ void setLeft(const Node& left);
 void setRight(const Node& right);
 
 template <class K, class D>
-int getHeight(){
-    return this.height;
+int Node<K,D>::getHeight(){
+    return Node<K,D>::height;
 }
