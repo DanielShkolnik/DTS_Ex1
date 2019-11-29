@@ -166,3 +166,27 @@ void Avl<K,D>::fix_BFs(Node<K,D>& leaf){
 }
 
 
+template <class K, class D, class P>
+void inorder(Node<K,D>& node, P predicate){
+    if (node== nullptr) return;
+    inorder(node.getLeft(),predicate);
+    predicate(node);
+    inorder(node.getRight(),predicate);
+}
+
+template <class K, class D, class P>
+void preorder(Node<K,D>& node, P predicate){
+    if (node== nullptr) return;
+    predicate(node);
+    preorder(node.getLeft(),predicate);
+    preorder(node.getRight(),predicate);
+}
+
+template <class K, class D, class P>
+void postorder(Node<K,D>& node, P predicate){
+    if (node== nullptr) return;
+    postorder(node.getLeft(),predicate);
+    postorder(node.getRight(),predicate);
+    predicate(node);
+}
+

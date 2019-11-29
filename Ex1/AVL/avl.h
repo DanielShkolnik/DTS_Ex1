@@ -11,6 +11,7 @@ private:
     Node<K,D>& find_nearest(K key);
     void fix_BFs(Node<K,D>& node);
     bool is_left_son(const Node<K,D>& node);
+
 public:
     Avl()= default;
     ~Avl()= default;
@@ -24,13 +25,20 @@ public:
     void rotateLR(const Node<K,D>& node); // Omer
     void rotateRL(const Node<K,D>& node); // Daniel
     void rotateRR(const Node<K,D>& node); // Daniel
-    Node<K,D>** inorder() const; // Daniel
-    Node<K,D>** preorder() const; // Omer
-    Node<K,D>** postorder() const; // Daniel
 
     class KeyExists{};
     class KeyNotFound{};
 };
+
+template <class K, class D, class P>
+void inorder(Node<K,D>& node, P predicate); // Daniel
+
+template <class K, class D, class P>
+void preorder(Node<K,D>& node, P predicate); // Omer
+
+template <class K, class D, class P>
+void postorder(Node<K,D>& node, P predicate); // Daniel
+
 
 
 
