@@ -11,6 +11,7 @@ private:
     void fix_BFs(std::shared_ptr<Node<K,D>> leaf); //CHANGE TO SMART PTR
     bool is_left_son(std::shared_ptr<Node<K,D>> node);
     void update_head(std::shared_ptr<Node<K,D>> node);
+    void fix_relations(std::shared_ptr<Node<K,D>> A, std::shared_ptr<Node<K,D>> B);
 public:
     Avl():head(nullptr){}
     ~Avl()= default;
@@ -26,6 +27,7 @@ public:
     void rotateRL(std::shared_ptr<Node<K,D>> node); // Daniel
     void rotateRR(std::shared_ptr<Node<K,D>> node); // Daniel
 
+    class Error{};
     class KeyExists{};
     class KeyNotFound{};
 };
@@ -140,6 +142,7 @@ bool Avl<K,D>::is_left_son(std::shared_ptr<Node<K,D>> node){
 }
 template <class K, class D>
 void Avl<K,D>::rotateRR(std::shared_ptr<Node<K,D>> B){
+    std::shared_ptr<Node<K,D>> B_papa=B->getPapa();
     std::shared_ptr<Node<K,D>> A=B->getRight();
     std::shared_ptr<Node<K,D>> A_left=A->getLeft();
     A->setLeft(B);
@@ -233,4 +236,15 @@ void Avl<K,D>::update_head(std::shared_ptr<Node<K,D>> node){
     }
     this->head = node;
 }
+
+template <class K, class D>
+void Avl<K,D>::fix_relations(std::shared_ptr<Node<K,D>> papa, std::shared_ptr<Node<K,D>> son){
+    if (!papa || !son) throw Avl<K,D>::Error();
+    if (papa->getKey()>son->getKey()) papa->setLeft(son);
+    else papa->setRight(son);
+    son->setPapa(papa);
+}
+
+
+
 #endif
