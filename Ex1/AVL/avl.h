@@ -8,7 +8,7 @@ class Avl{
 private:
     int verticesNum;
     Node<K,D> head;
-    Node<K,D> find_nearest(K key);
+    Node<K,D>& find_nearest(K key);
 public:
     Avl()= default;
     ~Avl()= default;
