@@ -55,9 +55,12 @@ void Avl<K,D>::insert(const K& key, const D& data){
     Node<K,D>& new_node=Node<K,D>(key,data,nearest_node);
     if (key>nearest_node.getKey()) nearest_node.setRight(new_node);
     if (key<nearest_node.getKey()) nearest_node.setLeft(new_node);
-    Node<K,D>& papa=new_node.getPapa();
-    bool height_not_changed = false;
-    while (papa!= nullptr && height_not_changed!=true )
+    Node<K,D>& current=new_node;
+}
+
+template <class K, class D>
+void Avl<K,D>::fix_BFs(Node<K,D>& node){
+
 }
 
 
