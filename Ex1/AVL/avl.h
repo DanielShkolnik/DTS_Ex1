@@ -25,6 +25,9 @@ public:
     Node<K,D>** inorder() const; // Omer
     Node<K,D>** preorder() const; // Omer
     Node<K,D>** postorder() const; // Daniel
+
+    class KeyExists{};
+    class KeyNotFound{};
 };
 
 
