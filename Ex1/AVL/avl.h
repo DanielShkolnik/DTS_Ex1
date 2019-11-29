@@ -9,6 +9,7 @@ private:
     int verticesNum;
     Node<K,D> head;
     Node<K,D>& find_nearest(K key);
+    void fix_BFs(Node<K,D>& node);
 public:
     Avl()= default;
     ~Avl()= default;
