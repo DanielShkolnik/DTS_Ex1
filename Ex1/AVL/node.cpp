@@ -23,8 +23,18 @@ void Node<K,D>::setRight(const Node<K,D>& right){
 }
 
 template <class K, class D>
-int Node<K,D>::getHeight(){
+int Node<K,D>::getHeight() const{
     return this->height;
+}
+
+template <class K, class D>
+const K& Node<K,D>::getKey() const{
+    return this->key;
+}
+
+template <class K, class D>
+const D& Node<K,D>::getData() const{
+    return this->data;
 }
 
 int max(int a, int b){

@@ -12,3 +12,7 @@ Node<K,D> Avl<K,D>::find_nearest(K key) {
 
     }
 }
+
+void insert(const K& key, const D& data){
+
+}

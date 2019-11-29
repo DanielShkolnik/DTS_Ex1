@@ -18,7 +18,11 @@ public:
     void calcHeight();
     void setLeft(const Node<K,D>& left);
     void setRight(const Node<K,D>& right);
-    int getHeight();
+    int getHeight() const;
+    const K& getKey() const;
+    const D& getData() const;
+
+
 };
 int max(int a, int b);
 
