@@ -13,17 +13,17 @@ public:
     ~Avl();
     Avl(const Avl& avl)= delete;
     Avl& operator=(const Avl& avl)= delete;
-    void insert(const K& key, const D& data);
-    void delete_element(const K& key);
-    Node<K,D>& find(const K& key);
-    int getBF(const Node<K,D>& node);
-    void rotateLL(const Node<K,D>& node);
-    void rotateLR(const Node<K,D>& node);
-    void rotateRL(const Node<K,D>& node);
-    void rotateRR(const Node<K,D>& node);
-    Node<K,D>** inorder() const;
-    Node<K,D>** preorder() const;
-    Node<K,D>** postorder() const;
+    void insert(const K& key, const D& data); // Daniel
+    void delete_element(const K& key); // Daniel
+    Node<K,D>& find(const K& key); // Omer
+    int getBF(const Node<K,D>& node); // Dainel
+    void rotateLL(const Node<K,D>& node); // Omer
+    void rotateLR(const Node<K,D>& node); // Omer
+    void rotateRL(const Node<K,D>& node); // Daniel
+    void rotateRR(const Node<K,D>& node); // Daniel
+    Node<K,D>** inorder() const; // Omer
+    Node<K,D>** preorder() const; // Omer
+    Node<K,D>** postorder() const; // Daniel
 };
 
 
