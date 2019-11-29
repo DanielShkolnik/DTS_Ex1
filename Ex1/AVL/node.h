@@ -20,6 +20,6 @@ public:
     void setRight(const Node<K,D>& right);
     int getHeight();
 };
-static int max(int a, int b);
+int max(int a, int b);
 
 #endif
