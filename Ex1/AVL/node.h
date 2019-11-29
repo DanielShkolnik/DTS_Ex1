@@ -1,14 +1,15 @@
 #ifndef NODE_H_
 #define NODE_H_
 
+#include <memory>
 template <class K, class D>
 class Node{
 private :
     K key;
     D data;
-    Node* left;
-    Node* right;
-    Node* papa;
+    std::shared_ptr<Node> left;
+    std::shared_ptr<Node> right;
+    std::shared_ptr<Node> papa;
     int height;
 public:
     Node()= delete;
@@ -17,8 +18,8 @@ public:
     Node(const Node<K,D>& node)= default;
     Node<K,D>& operator=(const Node<K,D>& node)= default;
     void calcHeight();
-    void setLeft(const Node<K,D>& left);
-    void setRight(const Node<K,D>& right);
+    void setLeft(const std::shared_ptr<Node<K,D>>& left);
+    void setRight(const std::shared_ptr<Node<K,D>>& right);
     int getHeight() const;
     const K& getKey() const;
     const D& getData() const;
@@ -31,7 +32,7 @@ public:
 int max(int a, int b);
 
 template <class K, class D>
-Node<K,D>::Node(K key, D data, const Node<K,D>& papa):key(key),data(data),papa(papa),height(0){}
+Node<K,D>::Node(K key, D data, const Node<K,D>& papa):key(key),data(data),papa(papa),height(1){}
 
 
 template <class K, class D>
@@ -40,13 +41,13 @@ void Node<K,D>::calcHeight(){
 }
 
 template <class K, class D>
-void Node<K,D>::setLeft(const Node<K,D>& left){
-    this->left=left;
+void Node<K,D>::setLeft(const std::shared_ptr<Node<K,D>>& left){
+    this->left = left;
 }
 
 template <class K, class D>
-void Node<K,D>::setRight(const Node<K,D>& right){
-    this->right=right;
+void Node<K,D>::setRight(const std::shared_ptr<Node<K,D>>& right){
+    this->right = right;
 }
 
 template <class K, class D>
@@ -81,7 +82,7 @@ Node<K,D>& Node<K,D>::getPapa() const{
 
 template <class K, class D>
 void Node<K,D>::setPapa(const Node<K,D>& papa){
-    this->papa=papa;
+    this->papa=std::shared_ptr<Node<K,D>>(papa);
 }
 
 int max(int a, int b){

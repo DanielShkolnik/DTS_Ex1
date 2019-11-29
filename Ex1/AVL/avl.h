@@ -2,13 +2,13 @@
 #define AVL_H_
 
 #include "node.h"
-
+#include <memory>
 template <class K, class D>
 class Avl{
 private:
-    Node<K,D>* head;
-    Node<K,D>& find_nearest(K key);
-    void fix_BFs(Node<K,D>& node);
+    std::shared_ptr<Node<K,D>> head;
+    std::shared_ptr<Node<K,D>> find_nearest(K key);
+    void fix_BFs(Node<K,D>& leaf); //CHANGE TO SMART PTR
     bool is_left_son(const Node<K,D>& node);
 
 public:
@@ -33,30 +33,30 @@ template <class K, class D>
 void Avl<K,D>::insert(const K& key, const D& data){
     Node<K,D>& nearest_node=this->find_nearest(key);
     if (nearest_node.getKey()==key) throw Avl<K,D>::KeyExists();
-    Node<K,D> new_node=Node<K,D>(key,data,nearest_node);
+    std::shared_ptr<Node<K,D>> new_node_ptr = std::shared_ptr<Node<K,D>>(new Node<K,D>(key,data,nearest_node));
     if(&nearest_node == nullptr){
-        this->head=new_node;
+        this->head=new_node_ptr;
         return;
     }
-    if (key>nearest_node.getKey()) nearest_node.setRight(new_node);
-    if (key<nearest_node.getKey()) nearest_node.setLeft(new_node);
-    this->fix_BFs(new_node);
+    if (key>nearest_node.getKey()) nearest_node.setRight(new_node_ptr);
+    if (key<nearest_node.getKey()) nearest_node.setLeft(new_node_ptr);
+    this->fix_BFs(new_node_ptr);
 }
 
 // gets the key and returns element with the nearest existing key
 template <class K, class D>
-Node<K,D>& Avl<K,D>::find_nearest(K key) {
+std::shared_ptr<Node<K,D>> Avl<K,D>::find_nearest(K key) {
     if(this->head == nullptr) return nullptr; // avl is empty.
-    Node<K,D> current_node = this->head;
-    Node<K,D> prev_node = this->head;
+    std::shared_ptr<Node<K,D>> current_node = this->head;
+    std::shared_ptr<Node<K,D>> prev_node = this->head;
     while (current_node){
         prev_node = current_node;
-        if(key > current_node.getKey()){
-            current_node = current_node.getRight();
-        } else if(key == current_node.getKey()){
+        if(key > current_node->getKey()){
+            current_node = current_node->getRight();
+        } else if(key == current_node->getKey()){
             return current_node;
         } else{
-            current_node = current_node.getLeft();
+            current_node = current_node->getLeft();
         }
     }
     return prev_node;
