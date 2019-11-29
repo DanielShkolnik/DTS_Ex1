@@ -38,13 +38,13 @@ const D& Node<K,D>::getData() const{
 }
 
 template <class K, class D>
-const Node<K,D>& Node<K,D>::getLeft() const{
+Node<K,D>& Node<K,D>::getLeft() const{
     return this->left;
 }
 
 
 template <class K, class D>
-const Node<K,D>& Node<K,D>::getRight() const{
+Node<K,D>& Node<K,D>::getRight() const{
     return this->right;
 }
 
