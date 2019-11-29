@@ -147,6 +147,10 @@ void Avl<K,D>::rotateRR(std::shared_ptr<Node<K,D>> B){
     std::shared_ptr<Node<K,D>> A_left=A->getLeft();
     A->setLeft(B);
     B->setRight(A_left);
+    if (B_papa!=nullptr)fix_relations(B_papa,A);
+    else A->setPapa(nullptr);
+    fix_relations(A,B);
+    if (A_left!= nullptr) fix_relations(B,A_left);
 }
 
 template <class K, class D>
