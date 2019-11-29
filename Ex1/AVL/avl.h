@@ -8,9 +8,10 @@ class Avl{
 private:
     int verticesNum;
     Node<K,D> head;
+    Node<K,D> find_nearest(K key);
 public:
-    Avl();
-    ~Avl();
+    Avl()= default;
+    ~Avl()= default;
     Avl(const Avl& avl)= delete;
     Avl& operator=(const Avl& avl)= delete;
     void insert(const K& key, const D& data); // Daniel
