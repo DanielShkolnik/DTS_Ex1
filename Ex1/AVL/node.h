@@ -13,11 +13,11 @@ public:
     Node()= default;
     Node(K key, D data);
     ~Node()= default;
-    Node(const Node& node)= default;
-    Node<K,D>& operator=(const Node& node)= default;
+    Node(const Node<K,D>& node)= default;
+    Node<K,D>& operator=(const Node<K,D>& node)= default;
     void calcHeight();
-    void setLeft(const Node& left);
-    void setRight(const Node& right);
+    void setLeft(const Node<K,D>& left);
+    void setRight(const Node<K,D>& right);
     int getHeight();
 };
 
