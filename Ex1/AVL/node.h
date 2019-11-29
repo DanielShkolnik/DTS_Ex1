@@ -24,6 +24,7 @@ public:
     const D& getData() const;
     Node<K,D>& getLeft() const;
     Node<K,D>& getRight() const;
+    Node<K,D>& getPapa() const;
 
 };
 int max(int a, int b);
