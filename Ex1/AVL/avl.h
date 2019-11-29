@@ -79,10 +79,19 @@ void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
     std::shared_ptr<Node<K,D>> A = B->getRight();
     std::shared_ptr<Node<K,D>> A_left = A->getLeft();
     std::shared_ptr<Node<K,D>> A_right = A->getRight();
+    std::shared_ptr<Node<K,D>> C_papa = C->getPapa();
+
     A->setLeft(B);
     B->setRight(A_left);
     A->setRight(C);
     C->setLeft(A_right);
+    if(C_papa == nullptr) A->setPapa(nullptr);
+    else fix_relations(C_papa,A);
+    fix_relations(A,C);
+    fix_relations(A,B);
+    if(A_left != nullptr) fix_relations(B,A_left);
+    if(A_right != nullptr) fix_relations(C,A_right);
+
 }
 template <class K, class D>
 std::shared_ptr<Node<K,D>> Avl<K,D>::find(const K& key){
