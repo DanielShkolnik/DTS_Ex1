@@ -22,3 +22,42 @@ Node<K,D>& Avl<K,D>::find_nearest(K key) {
     }
     return prev_node;
 }
+
+template <class K, class D>
+void Avl<K,D>::rotateRR(const Node<K,D>& B){
+    Node<K,D>& A=B.getRight();
+    Node<K,D>& A_left=A.getLeft();
+    A.setLeft(B);
+    B.setRight(A_left);
+}
+
+template <class K, class D>
+void Avl<K,D>::rotateRL(const Node<K,D>& C){
+    Node<K,D>& B=C.getRight();
+    Node<K,D>& A=B.getLeft();
+    Node<K,D>& A_left=A.getLeft();
+    Node<K,D>& A_right=A.getRight();
+    A.setLeft(C);
+    C.setRight(A_left)
+    A.setRight(B);
+    B.setLeft(A_right);
+}
+
+template <class K, class D>
+int Avl<K,D>::getBF(const Node<K,D>& node){
+    return node.getLeft().getHeight()-node.getRight().getHeight();
+}
+
+template <class K, class D>
+void Avl<K,D>::insert(const K& key, const D& data){
+    Node<K,D>& nearest_node=this->find_nearest(key);
+    if (nearest_node.getKey()==key) throw Avl<K,D>::KeyExists();
+    Node<K,D>& new_node=Node<K,D>(key,data,nearest_node);
+    if (key>nearest_node.getKey()) nearest_node.setRight(new_node);
+    if (key<nearest_node.getKey()) nearest_node.setLeft(new_node);
+    Node<K,D>& papa=new_node.getPapa();
+    bool height_not_changed = false;
+    while (papa!= nullptr && height_not_changed!=true )
+}
+
+

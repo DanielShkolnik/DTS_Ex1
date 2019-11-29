@@ -42,12 +42,15 @@ Node<K,D>& Node<K,D>::getLeft() const{
     return this->left;
 }
 
-
 template <class K, class D>
 Node<K,D>& Node<K,D>::getRight() const{
     return this->right;
 }
 
+template <class K, class D>
+Node<K,D>& Node<K,D>::getPapa() const{
+    return this->papa;
+}
 
 int max(int a, int b){
     if (a>b) return a;
