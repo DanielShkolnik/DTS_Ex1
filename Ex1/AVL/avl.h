@@ -10,7 +10,7 @@ private:
     Node<K,D> head;
     Node<K,D>& find_nearest(K key);
     void fix_BFs(Node<K,D>& node);
-    bool is_left_son(const Node<K,D>& node)
+    bool is_left_son(const Node<K,D>& node);
 public:
     Avl()= default;
     ~Avl()= default;
