@@ -21,7 +21,8 @@ public:
     int getHeight() const;
     const K& getKey() const;
     const D& getData() const;
-
+    const Node<K,D>& getLeft() const;
+    const Node<K,D>& getRight() const;
 
 };
 int max(int a, int b);
