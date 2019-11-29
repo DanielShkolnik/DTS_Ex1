@@ -56,7 +56,7 @@ void Avl<K,D>::delete_element(const K& key){
     Node<K,D>& nearest = this->find_nearest(key);
     if(nearest== nullptr || nearest.getKey()!=key) throw Avl<K,D>::KeyNotFound();
     //leaf
-    if(nearest.getRight()== nullptr&& nearest.getLeft()== nullptr){
+    if(nearest.getRight()== nullptr && nearest.getLeft()== nullptr){
         if(is_left_son(nearest)){
             nearest.getPapa().setLeft(nullptr);
         }
@@ -75,6 +75,7 @@ void Avl<K,D>::delete_element(const K& key){
         // update papa after switch
         nearest.getLeft().setPapa(nearest.getPapa());
     }
+    //find the right left left... son
     else{
         Node<K,D>& current = nearest.getRight();
         while (current.getLeft()!= nullptr){
