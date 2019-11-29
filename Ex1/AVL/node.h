@@ -41,7 +41,7 @@ Node<K,D>::Node(K key, D data, std::shared_ptr<Node<K,D>> papa):key(key),data(da
 
 template <class K, class D>
 void Node<K,D>::calcHeight(){
-    if(this->left== nullptr && this->right== nullptr)this->height = 0;
+    if(this->left== nullptr && this->right== nullptr)this->height = 1;
     else if(this->left== nullptr) this->height = this->right->height +1;
     else if(this->right== nullptr) this->height = this->left->height +1;
     else this->height= max(this->left->height,this->right->height) + 1;
