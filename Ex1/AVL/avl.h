@@ -165,6 +165,8 @@ void Avl<K,D>::rotateRR(std::shared_ptr<Node<K,D>> B){
     else A->setPapa(nullptr);
     fix_relations(A,B);
     if (A_left!= nullptr) fix_relations(B,A_left);
+    B->calcHeight();
+    A->calcHeight();
 }
 
 template <class K, class D>
@@ -183,6 +185,9 @@ void Avl<K,D>::rotateRL(std::shared_ptr<Node<K,D>> C){
     if(A_left!= nullptr)fix_relations(C,A_left);
     fix_relations(A,B);
     if(A_right!= nullptr)fix_relations(B,A_right);
+    C->calcHeight();
+    B->calcHeight();
+    A->calcHeight();
 }
 
 template <class K, class D>
