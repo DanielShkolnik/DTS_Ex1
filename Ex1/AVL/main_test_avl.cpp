@@ -21,12 +21,21 @@ int main() {
       a.insert(90,3);
       a.insert(110,3);
       a.insert(41,3);
-      postorder(a.getHead(),print_key);
-      std::cout<<std::endl;
       a.delete_element(40);
-      postorder(a.getHead(),print_key);
-      std::cout<<std::endl;
       a.delete_element(50);
+      a.insert(120,3);
+      a.insert(130,3);
+      a.insert(38,3);
+      a.insert(36,3);
+      a.insert(95,3);
+      a.insert(107,3);
+      a.insert(103,3);
+      a.insert(115,3);
+      a.delete_element(100);
+      a.delete_element(90);
+      a.delete_element(41);
+      a.delete_element(36);
+      a.delete_element(35);
       postorder(a.getHead(),print_key);
       std::cout<<std::endl<<"finito"<<std::endl;
    }
