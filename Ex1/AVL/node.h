@@ -18,16 +18,17 @@ public:
     Node(const Node&)= delete;
     std::shared_ptr<Node> operator=(const Node&)= delete;
     void calcHeight();
-    void setLeft(std::shared_ptr<Node<K,D>>& left);
-    void setRight(std::shared_ptr<Node<K,D>>& right);
+    void setLeft(const std::shared_ptr<Node<K,D>>& left);
+    void setRight(const std::shared_ptr<Node<K,D>>& right);
     int getHeight() const;
     const K& getKey() const;
     const D& getData() const;
-    std::shared_ptr<Node> getLeft() const;
-    std::shared_ptr<Node> getRight() const;
-    std::shared_ptr<Node> getPapa() const;
+    std::shared_ptr<Node> getLeft();
+    std::shared_ptr<Node> getRight();
+    std::shared_ptr<Node> getPapa();
     void setPapa(std::shared_ptr<Node> papa);
     bool isLeaf();
+    bool isRoot();
 
 };
 
@@ -42,19 +43,19 @@ Node<K,D>::Node(K key, D data, std::shared_ptr<Node<K,D>> papa):key(key),data(da
 
 template <class K, class D>
 void Node<K,D>::calcHeight(){
-    if(this->left== nullptr && this->right== nullptr)this->height = 1;
-    else if(this->left== nullptr) this->height = this->right->height +1;
-    else if(this->right== nullptr) this->height = this->left->height +1;
-    else this->height= max(this->left->height,this->right->height) + 1;
+    if(this->left== nullptr && this->right== nullptr)this->height = 1; //leaf
+    else if(this->left== nullptr) this->height = this->right->height +1; // no left son
+    else if(this->right== nullptr) this->height = this->left->height +1; // no right son
+    else this->height= max(this->left->height,this->right->height) + 1; // max between sons
 }
 
 template <class K, class D>
-void Node<K,D>::setLeft(std::shared_ptr<Node<K,D>>& left){
+void Node<K,D>::setLeft(const std::shared_ptr<Node<K,D>>& left){
     this->left = left;
 }
 
 template <class K, class D>
-void Node<K,D>::setRight(std::shared_ptr<Node<K,D>>& right){
+void Node<K,D>::setRight(const std::shared_ptr<Node<K,D>>& right){
     this->right = right;
 }
 
@@ -74,17 +75,17 @@ const D& Node<K,D>::getData() const{
 }
 
 template <class K, class D>
-std::shared_ptr<Node<K,D>> Node<K,D>::getLeft() const{
+std::shared_ptr<Node<K,D>> Node<K,D>::getLeft(){
     return this->left;
 }
 
 template <class K, class D>
-std::shared_ptr<Node<K,D>> Node<K,D>::getRight() const{
+std::shared_ptr<Node<K,D>> Node<K,D>::getRight(){
     return this->right;
 }
 
 template <class K, class D>
-std::shared_ptr<Node<K,D>> Node<K,D>::getPapa() const{
+std::shared_ptr<Node<K,D>> Node<K,D>::getPapa(){
     return this->papa;
 }
 
@@ -96,6 +97,10 @@ void Node<K,D>::setPapa(std::shared_ptr<Node<K,D>> papa){
 template <class K, class D>
 bool Node<K,D>::isLeaf() {
     return  (this->getRight() == nullptr && this->getLeft() == nullptr);
+}
+template <class K, class D>
+bool Node<K,D>::isRoot(){
+    return this->getPapa() == nullptr;
 }
 
 #endif

@@ -76,6 +76,8 @@ void Avl<K,D>::rotateLL(std::shared_ptr<Node<K,D>> B){
     else A->setPapa(nullptr);
     fix_relations(A,B);
     if (A_right!= nullptr) fix_relations(B,A_right);
+    A->calcHeight();
+    B->calcHeight();
 }
 
 template <class K, class D>
@@ -85,7 +87,6 @@ void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
     std::shared_ptr<Node<K,D>> A_left = A->getLeft();
     std::shared_ptr<Node<K,D>> A_right = A->getRight();
     std::shared_ptr<Node<K,D>> C_papa = C->getPapa();
-
     A->setLeft(B);
     B->setRight(A_left);
     A->setRight(C);
@@ -96,7 +97,9 @@ void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
     fix_relations(A,B);
     if(A_left != nullptr) fix_relations(B,A_left);
     if(A_right != nullptr) fix_relations(C,A_right);
-
+    A->calcHeight();
+    B->calcHeight();
+    C->calcHeight();
 }
 template <class K, class D>
 std::shared_ptr<Node<K,D>> Avl<K,D>::find(const K& key){
@@ -109,28 +112,29 @@ std::shared_ptr<Node<K,D>> Avl<K,D>::find(const K& key){
 }
 
 template <class K, class D>
+void remove_from_papa(const std::shared_ptr<Node<K,D>>& node){
+    if(node->isRoot()) return;
+    if(is_left_son(node)) node->getPapa()->setLeft(nullptr);
+    else node->getPapa()->setRight(nullptr);
+}
+template <class K, class D>
+void connect_right_son_to_grandpapa(const std::shared_ptr<Node<K,D>>& node){
+    if(node->isRoot()) return;
+}
+
+template <class K, class D>
 void Avl<K,D>::delete_element(const K& key){
+    // left->right->right....
     std::shared_ptr<Node<K,D>> nearest = this->find_nearest(key);
     if(nearest== nullptr || nearest->getKey()!=key) throw Avl<K,D>::KeyNotFound();
-    //leaf
-    if(nearest->getRight()== nullptr && nearest->getLeft()== nullptr){
-        if(is_left_son(nearest)){
-            nearest->getPapa()->setLeft(nullptr);
-        }
-        else{
-            nearest->getPapa()->setRight(nullptr);
-        }
-    }
-        //no right son
-    else if(nearest->getRight()== nullptr){
-        if(is_left_son(nearest)){
-            nearest->getPapa()->setLeft(nearest->getLeft());
-        }
-        else{
-            nearest->getPapa()->setRight(nearest->getLeft());
-        }
-        // update papa after switch
-        nearest->getLeft()->setPapa(nearest->getPapa());
+
+    // only one element
+    if(nearest->isLeaf() && nearest->isRoot()) this->head = nullptr;
+    //leaf and not root => papa exists
+    else if(nearest->isLeaf()) remove_from_papa(nearest);
+    //no left son but not leaf => right son and papa exists
+    else if(nearest->getLeft()== nullptr){
+
     }
         //find the right left left->->-> son
     else{
@@ -145,10 +149,10 @@ void Avl<K,D>::delete_element(const K& key){
             nearest->getPapa()->setRight(current);
         }
         current->setLeft(nearest->getLeft());
+        current->setRight(nearest->getRight());
         current->setPapa(nearest->getPapa());
     }
     this->update_head(nearest); // get the root from the deleted node
-    delete nearest;
 }
 template <class K, class D>
 bool Avl<K,D>::is_left_son(std::shared_ptr<Node<K,D>> node){
@@ -184,6 +188,7 @@ void Avl<K,D>::rotateRL(std::shared_ptr<Node<K,D>> C){
     else A->setPapa(nullptr);
     if(A_left!= nullptr)fix_relations(C,A_left);
     fix_relations(A,B);
+    fix_relations(A,C);
     if(A_right!= nullptr)fix_relations(B,A_right);
     C->calcHeight();
     B->calcHeight();

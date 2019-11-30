@@ -10,22 +10,23 @@ int main() {
 
    try{
 
-      a.insert(1,1);
-      a.insert(2,1);
-      a.insert(3,1);
-      a.insert(4,1);
-      a.insert(5,1);
-      a.insert(6,1);
-      /*
-      a.insert(50,3);
-      a.insert(60,3);
-      a.insert(55,3);
-      a.insert(70,3);
-      a.insert(57,3);
-      a.insert(80,3);
-      */
-      inorder(a.getHead(),print_key);
+      a.insert(50,1);
+      a.insert(40,1);
+      a.insert(100,1);
+      a.insert(30,1);
+      a.insert(35,1);
+      a.insert(45,1);
+      a.insert(43,3);
+      a.insert(46,3);
+      a.insert(90,3);
+      a.insert(110,3);
+      a.insert(41,3);
+      postorder(a.getHead(),print_key);
       std::cout<<std::endl;
+      a.delete_element(40);
+      postorder(a.getHead(),print_key);
+      std::cout<<std::endl;
+      a.delete_element(50);
       postorder(a.getHead(),print_key);
       std::cout<<std::endl<<"finito"<<std::endl;
    }
