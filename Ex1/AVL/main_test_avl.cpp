@@ -1,8 +1,7 @@
 #include <iostream>
 #include "avl.h"
-
 void print_key(const std::shared_ptr<Node<int,int>>& node_ptr){
-   std::cout<<node_ptr->getKey()<<" ";
+   std::cout<<"("<<node_ptr->getKey()<<","<<node_ptr->getHeight()<<")";
 }
 
 int main() {
@@ -36,7 +35,21 @@ int main() {
       a.delete_element(41);
       a.delete_element(36);
       a.delete_element(35);
+      a.insert(47,3);
+      a.insert(80,3);
+      a.delete_element(43);
+      a.insert(10,3);
+      a.delete_element(45);
+      a.delete_element(38);
+      a.delete_element(30);
+      a.insert(150,3);
+      a.insert(140,3);
+      a.delete_element(47);
+      a.insert(111,3);
+      a.insert(125,3);
+      a.delete_element(115);
       postorder(a.getHead(),print_key);
+      std::cout<<std::endl;
       std::cout<<std::endl<<"finito"<<std::endl;
    }
    catch(Avl<int,int>::KeyExists err) {
