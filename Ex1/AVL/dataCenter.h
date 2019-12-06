@@ -22,6 +22,7 @@ private:
     int num_of_servers;
     void remove_from_list(int OS, int ID);
     int getAndRemoveFreeServer(std::shared_ptr<Node<int,Server>>& list);
+    void appendToList(std::shared_ptr<Node<int,Server>> tail, std::shared_ptr<Node<int,Server>> server_ptr);
 public:
     int getID();
     int getNumOfLinux();
@@ -31,6 +32,7 @@ public:
     void freeServer(int server_ID);
     class InvalidServerID{};
     class AllServersAreTaken{};
+    class ServerIsAlreadyFree{};
 };
 
 #endif //AVL_DATACENTER_H

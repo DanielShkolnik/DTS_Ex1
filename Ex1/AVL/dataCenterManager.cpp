@@ -37,4 +37,16 @@ StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
         DC_ptr->getData().freeServer(server_ID);
         return SUCCESS;
     }
+    catch(DataCenter::InvalidServerID& e){
+        return INVALID_INPUT;
+    }
+    catch(std::bad_alloc& e){
+        return ALLOCATION_ERROR;
+    }
+    catch(DataCenter::ServerIsAlreadyFree& e){
+        return FAILURE;
+    }
+    catch(Avl<int,DataCenter>::KeyNotFound& e){
+        return FAILURE;
+    }
 }

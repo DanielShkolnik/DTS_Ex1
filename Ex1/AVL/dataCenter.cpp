@@ -67,12 +67,22 @@ void DataCenter::remove_from_list(int OS, int server_ID) {
 void DataCenter::freeServer(int server_ID){
     if(server_ID >= this->num_of_servers || server_ID < 0) throw InvalidServerID();
     std::shared_ptr<Node<int,Server>> server_ptr = this->servers_array[server_ID];
+    // if server is already free dont append it to free list
+    if(!(server_ptr->getData().getTaken())) throw ServerIsAlreadyFree();
     server_ptr->getData().setTaken(false); //set free
     // os linux
     if(server_ptr->getData().getOS() == 0){
-        server_ptr->
-        this->linux_free_tail->setNext(server_ptr);
+        appendToList(this->linux_free_tail,server_ptr);
+        this->linux_free_tail = this->linux_free_tail->getNext();
     }
+    // os windows
+    else{
+        appendToList(this->windows_free_head,server_ptr);
+        this->windows_free_head = this->windows_free_head->getNext();
+    }
+}
 
-
+void DataCenter::appendToList(std::shared_ptr<Node<int,Server>> tail, std::shared_ptr<Node<int,Server>> server_ptr){
+    server_ptr->setPrev(tail);
+    tail->setNext(server_ptr);
 }
