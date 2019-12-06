@@ -183,7 +183,7 @@ static errorType OnInit(void** DS, const char* const command) {
     };
     isInit = true;
 
-    ValidateRead(sscanf(command, ""), 0, "%s failed.\n", commandStr[INIT_CMD]);
+    ValidateRead(0, 0, "%s failed.\n", commandStr[INIT_CMD]);
     *DS = Init();
 
     if (*DS == NULL) {
