@@ -19,31 +19,37 @@ StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, in
         this->DCs_by_NumOfWindows.insert(current_key_windows,prev_DC);
         return SUCCESS;
     }
-    catch(Avl<int,DataCenter>::KeyNotFound& e){
-        return FAILURE;
-    }
-    catch(DataCenter::AllServersAreTaken& e){
-        return FAILURE;
-    }
     catch(DataCenter::InvalidServerID& e){
         return INVALID_INPUT;
     }
     catch(std::bad_alloc& e){
         return ALLOCATION_ERROR;
     }
+    catch(Avl<int,DataCenter>::KeyNotFound& e){
+        return FAILURE;
+    }
+    catch(DataCenter::AllServersAreTaken& e){
+        return FAILURE;
+    }
 }
 
 StatusType DataCenterManager::RemoveDataCenter(int DC_ID){
     if(DC_ID<=0) return INVALID_INPUT;
     try{
+        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
+        Key prev_key_linux(DC_ptr->getKey(),DC_ptr->getData().getNumOfLinux());
+        Key prev_key_windows(DC_ptr->getKey(),DC_ptr->getData().getNumOfWindows());
         this->DCs_by_ID.delete_element(DC_ID);
+        this->DCs_by_NumOfLinux.delete_element(prev_key_linux);
+        this->DCs_by_NumOfWindows.delete_element(prev_key_windows);
         this->num_of_DCs--;
-    }
-    catch(Avl<int,DataCenter>::KeyNotFound& e){
-        return FAILURE;
+        return SUCCESS;
     }
     catch(std::bad_alloc& e) {
         return ALLOCATION_ERROR;
+    }
+    catch(Avl<int,DataCenter>::KeyNotFound& e){
+        return FAILURE;
     }
 }
 
@@ -59,6 +65,7 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
         else{
             inorder<Key,DataCenter,AddToArray>(this->DCs_by_NumOfWindows.getHead(),pred);
         }
+        return SUCCESS;
     }
     catch(std::bad_alloc& e) {
         return ALLOCATION_ERROR;

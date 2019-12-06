@@ -14,8 +14,10 @@ public:
     ~Key()= default;
     Key(const Key& key)= default;
     Key& operator=(const Key& key)= default;
-    bool operator<(const Key& other);
-    bool operator==(const Key& other);
+    bool operator<(const Key& other) const ;
+    bool operator>(const Key& other) const ;
+    bool operator==(const Key& other) const ;
+    bool operator!=(const Key& other) const ;
 };
 
 #endif //AVL_KEY_H
