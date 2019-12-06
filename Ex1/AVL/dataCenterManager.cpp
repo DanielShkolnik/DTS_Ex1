@@ -23,3 +23,10 @@ StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, in
         return ALLOCATION_ERROR;
     }
 }
+
+StatusType DataCenterManager::RemoveDataCenter(int DC_ID){
+    try{
+        this->DCs_by_ID.delete_element(DC_ID);
+    }
+    catch(Avl<K,D>::KeyNotFound())
+}
