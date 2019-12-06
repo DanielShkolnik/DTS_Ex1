@@ -34,7 +34,8 @@ public:
     // for list use.
     std::shared_ptr<Node> getNext();
     std::shared_ptr<Node> getPrev();
-    void setNext(std::shared_ptr<Node> next);
+    void setPrev(const std::shared_ptr<Node>& prev);
+    void setNext(const std::shared_ptr<Node>& next);
     Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next);
 };
 
@@ -120,11 +121,26 @@ bool Node<K,D>::isRoot(){
 
 template <class K, class D>
 std::shared_ptr<Node<K,D>> Node<K,D>::getNext(){
-    return this->getPapa();
+    return this->getRight();
 }
 
 template <class K, class D>
-void Node<K,D>::setNext(std::shared_ptr<Node<K,D>> next){
-    this->setPapa(next);
+void Node<K,D>::setNext(const std::shared_ptr<Node<K,D>>& next){
+    this->setRight(next);
 }
+
+template <class K, class D>
+std::shared_ptr<Node<K,D>> Node<K,D>::getPrev(){
+    return this->getLeft();
+}
+
+template <class K, class D>
+void Node<K,D>::setPrev(const std::shared_ptr<Node<K, D>>& prev){
+    this->setLeft(prev);
+}
+
+template <class K, class D>
+Node<K,D>::Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next):key(key),data(new D(data)),left(prev),right(next),height(1){}
+
+
 #endif

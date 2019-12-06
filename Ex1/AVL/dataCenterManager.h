@@ -16,7 +16,7 @@ private:
     Avl<int,DataCenter> DCs_by_NumOfWindows;
     int num_of_DCs;
 public:
-    DataCenterManager()= default;
+    DataCenterManager():num_of_DCs(0){};
     StatusType AddDataCenter(int DC_ID, int num_of_servers);
     StatusType RemoveDataCenter(int DC_ID);
     StatusType RequestServer(int DC_ID, int server_ID, int OS, int* assigned_server_ID);
