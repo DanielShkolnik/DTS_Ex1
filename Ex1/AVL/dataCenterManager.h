@@ -8,12 +8,13 @@
 #include "avl.h"
 #include "dataCenter.h"
 #include "library1.h"
+#include "key.h"
 
 class DataCenterManager{
 private:
-    Avl<int,DataCenter> DCs_by_ID;
-    Avl<int,DataCenter> DCs_by_NumOfLinux;
-    Avl<int,DataCenter> DCs_by_NumOfWindows;
+    Avl<Key,DataCenter> DCs_by_ID;
+    Avl<Key,DataCenter> DCs_by_NumOfLinux;
+    Avl<Key,DataCenter> DCs_by_NumOfWindows;
     int num_of_DCs;
 public:
     DataCenterManager():num_of_DCs(0){};
