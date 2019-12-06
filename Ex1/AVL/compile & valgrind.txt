@@ -1,0 +1,3 @@
+g++ -std=c++11 -DNDEBUG -Wall main_test_avl.cpp
+
+valgrind --leak-check=full ./a.out
