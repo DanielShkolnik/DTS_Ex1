@@ -41,12 +41,14 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
     if(!data_centers || (OS!=0 && OS!=1) || !num_of_data_servers) return INVALID_INPUT;
     if(this->DCs_by_ID.getHead()== nullptr) return FAILURE;
     try{
+        AddToArray pred(data_centers);
         //linux servers
         if(OS==0){
-
+            inorder<Key,DataCenter,AddToArray>(this->DCs_by_NumOfLinux.getHead(),pred);
         }
-
-
+        else{
+            inorder<Key,DataCenter,AddToArray>(this->DCs_by_NumOfWindows.getHead(),pred);
+        }
     }
     catch(std::bad_alloc& e) {
         return ALLOCATION_ERROR;
@@ -55,9 +57,6 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
 }
 
 
-void addDCToArray(const std::shared_ptr<Node<Key,DataCenter>>& data_center){
-
-}
 
 StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
     try{
@@ -78,3 +77,5 @@ StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
         return FAILURE;
     }
 }
+
+StatusType DataCenterManager::AddDataCenter(int DC_ID, int num_of_servers)

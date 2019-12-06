@@ -9,10 +9,11 @@
 #include "dataCenter.h"
 #include "library1.h"
 #include "key.h"
+#include <memory>
 
 class DataCenterManager{
 private:
-    Avl<Key,DataCenter> DCs_by_ID;
+    Avl<int,DataCenter> DCs_by_ID;
     Avl<Key,DataCenter> DCs_by_NumOfLinux;
     Avl<Key,DataCenter> DCs_by_NumOfWindows;
     int num_of_DCs;
@@ -23,9 +24,18 @@ public:
     StatusType RequestServer(int DC_ID, int server_ID, int OS, int* assigned_server_ID);
     StatusType FreeServer(int DC_ID, int server_ID);
     StatusType GetDataCentersByOs(int OS, int** data_centers, int* num_of_data_servers);
-    void Quit();
 };
 
-
+class AddToArray{
+private:
+    int i;
+    int** IDs_array;
+public:
+    void operator()(const std::shared_ptr<Node<Key,DataCenter>>& node){
+        *(this->IDs_array)[i] = node->getData().getID();
+        i++;
+    }
+    AddToArray(int** array):i(0),IDs_array(array){}
+};
 
 #endif //AVL_DATACENTERMANAGER_H
