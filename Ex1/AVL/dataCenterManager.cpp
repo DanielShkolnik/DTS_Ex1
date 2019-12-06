@@ -80,4 +80,10 @@ StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
     }
 }
 
-StatusType DataCenterManager::AddDataCenter(int DC_ID, int num_of_servers)
+StatusType DataCenterManager::AddDataCenter(int DC_ID, int num_of_servers){
+    if(DC_ID <=0 || num_of_servers <= 0) return INVALID_INPUT;
+    Key key_linux(DC_ID,num_of_servers);
+    Key key_windows(DC_ID,num_of_servers);
+    DataCenter dc(DC_ID,num_of_servers);
+    this->DCs_by_ID.insert(DC_ID,dc);
+}
