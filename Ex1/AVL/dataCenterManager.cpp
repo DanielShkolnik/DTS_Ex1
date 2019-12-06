@@ -80,8 +80,20 @@ StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
 
 StatusType DataCenterManager::AddDataCenter(int DC_ID, int num_of_servers){
     if(DC_ID <=0 || num_of_servers <= 0) return INVALID_INPUT;
-    Key key_linux(DC_ID,num_of_servers);
-    Key key_windows(DC_ID,num_of_servers);
-    DataCenter dc(DC_ID,num_of_servers);
-    this->DCs_by_ID.insert(DC_ID,dc);
+    try{
+        Key key_linux(DC_ID,num_of_servers);
+        Key key_windows(DC_ID,0);
+        DataCenter dc(DC_ID,num_of_servers);
+        this->DCs_by_ID.insert(DC_ID,dc);
+        this->DCs_by_NumOfLinux.insert(key_linux,dc);
+        this->DCs_by_NumOfWindows.insert(key_windows,dc);
+        return SUCCESS;
+    }
+    catch(std::bad_alloc& e){
+        return ALLOCATION_ERROR;
+    }
+    catch(Avl<int,DataCenter>::KeyExists& e){
+        return FAILURE;
+    }
+
 }
