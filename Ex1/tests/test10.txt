@@ -1,0 +1,1001 @@
+Init
+RemoveDataCenter 25
+FreeServer 22 316
+RequestServer 21 290 1
+FreeServer 30 304
+RemoveDataCenter 3
+RemoveDataCenter 22
+RequestServer 16 238 0
+RequestServer 21 64 0
+AddDataCenter 20 57
+RemoveDataCenter 6
+RemoveDataCenter 27
+GetDataCentersByOS 0
+AddDataCenter 4 284
+RemoveDataCenter 21
+RequestServer 30 61 0
+RemoveDataCenter 29
+AddDataCenter 5 228
+RemoveDataCenter 8
+RemoveDataCenter 11
+RemoveDataCenter 22
+GetDataCentersByOS 1
+AddDataCenter 2 207
+FreeServer 7 230
+AddDataCenter 25 182
+RemoveDataCenter 10
+RequestServer 3 117 0
+AddDataCenter 29 137
+GetDataCentersByOS 1
+RequestServer 21 292 0
+RequestServer 4 73 0
+AddDataCenter 20 314
+GetDataCentersByOS 0
+AddDataCenter 3 96
+RequestServer 7 253 0
+FreeServer 26 150
+FreeServer 14 157
+GetDataCentersByOS 1
+RemoveDataCenter 6
+RemoveDataCenter 4
+GetDataCentersByOS 0
+AddDataCenter 22 226
+AddDataCenter 6 134
+AddDataCenter 26 69
+RemoveDataCenter 21
+RemoveDataCenter 11
+FreeServer 3 200
+RequestServer 19 134 1
+FreeServer 0 124
+GetDataCentersByOS 0
+RemoveDataCenter 17
+RequestServer 28 216 1
+GetDataCentersByOS 1
+FreeServer 22 125
+FreeServer 11 8
+AddDataCenter 5 209
+GetDataCentersByOS 0
+AddDataCenter 28 252
+FreeServer 11 186
+FreeServer 1 154
+FreeServer 24 37
+AddDataCenter 12 301
+AddDataCenter 22 258
+AddDataCenter 27 216
+RequestServer 11 194 0
+RequestServer 22 258 0
+AddDataCenter 5 0
+AddDataCenter 24 280
+FreeServer 14 314
+RequestServer 23 83 0
+RemoveDataCenter 23
+RequestServer 24 21 1
+FreeServer 7 34
+FreeServer 8 203
+RemoveDataCenter 13
+RequestServer 29 316 1
+RequestServer 28 142 1
+AddDataCenter 18 82
+RequestServer 18 29 0
+GetDataCentersByOS 1
+FreeServer 2 109
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+RemoveDataCenter 14
+RequestServer 27 144 0
+RequestServer 21 50 0
+RequestServer 13 149 1
+GetDataCentersByOS 0
+RequestServer 23 16 1
+AddDataCenter 13 239
+FreeServer 30 246
+RemoveDataCenter 15
+GetDataCentersByOS 0
+AddDataCenter 16 99
+FreeServer 18 310
+RemoveDataCenter 22
+FreeServer 19 32
+RequestServer 12 120 0
+AddDataCenter 18 179
+RemoveDataCenter 15
+FreeServer 1 41
+RequestServer 19 245 1
+RemoveDataCenter 17
+GetDataCentersByOS 1
+RemoveDataCenter 11
+AddDataCenter 0 28
+GetDataCentersByOS 0
+RemoveDataCenter 6
+RemoveDataCenter 29
+GetDataCentersByOS 0
+FreeServer 6 287
+FreeServer 12 207
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+RequestServer 25 106 1
+GetDataCentersByOS 1
+RemoveDataCenter 21
+AddDataCenter 26 263
+RemoveDataCenter 14
+RequestServer 10 313 0
+FreeServer 9 80
+FreeServer 9 24
+FreeServer 30 4
+GetDataCentersByOS 1
+RequestServer 17 58 0
+RequestServer 13 88 0
+RequestServer 11 86 0
+RemoveDataCenter 14
+GetDataCentersByOS 0
+FreeServer 11 256
+FreeServer 1 244
+GetDataCentersByOS 0
+RequestServer 27 195 1
+FreeServer 17 126
+GetDataCentersByOS 1
+RemoveDataCenter 5
+RemoveDataCenter 29
+AddDataCenter 10 46
+AddDataCenter 16 24
+GetDataCentersByOS 0
+FreeServer 17 137
+RequestServer 25 94 1
+RemoveDataCenter 29
+RemoveDataCenter 0
+FreeServer 11 119
+FreeServer 24 61
+RemoveDataCenter 4
+RequestServer 14 175 1
+RemoveDataCenter 30
+RequestServer 1 156 1
+RemoveDataCenter 16
+FreeServer 18 167
+RequestServer 17 291 0
+GetDataCentersByOS 0
+RequestServer 20 217 1
+RemoveDataCenter 1
+RemoveDataCenter 20
+RemoveDataCenter 20
+AddDataCenter 1 19
+GetDataCentersByOS 1
+FreeServer 1 314
+AddDataCenter 14 11
+RemoveDataCenter 6
+AddDataCenter 27 26
+FreeServer 3 219
+GetDataCentersByOS 0
+AddDataCenter 18 32
+FreeServer 10 264
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 29 202
+AddDataCenter 9 183
+AddDataCenter 24 148
+RemoveDataCenter 2
+RequestServer 18 320 1
+RemoveDataCenter 23
+RequestServer 14 96 0
+RequestServer 6 126 1
+RequestServer 23 115 1
+FreeServer 2 308
+RemoveDataCenter 14
+RequestServer 3 71 1
+RequestServer 18 244 0
+RemoveDataCenter 3
+AddDataCenter 0 91
+FreeServer 1 54
+FreeServer 8 82
+AddDataCenter 21 83
+FreeServer 12 208
+GetDataCentersByOS 0
+RemoveDataCenter 21
+AddDataCenter 29 68
+AddDataCenter 17 133
+FreeServer 5 43
+RequestServer 3 301 1
+RequestServer 2 26 0
+RemoveDataCenter 1
+RequestServer 8 294 1
+RequestServer 23 179 0
+AddDataCenter 1 320
+GetDataCentersByOS 1
+RequestServer 24 53 0
+RequestServer 3 238 0
+AddDataCenter 11 18
+FreeServer 11 98
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+GetDataCentersByOS 1
+RequestServer 27 65 0
+GetDataCentersByOS 1
+RequestServer 10 263 1
+GetDataCentersByOS 1
+RequestServer 3 76 0
+RequestServer 20 105 1
+FreeServer 5 233
+AddDataCenter 14 249
+RemoveDataCenter 26
+RequestServer 5 167 1
+AddDataCenter 20 150
+GetDataCentersByOS 1
+GetDataCentersByOS 1
+FreeServer 14 78
+RemoveDataCenter 18
+RemoveDataCenter 26
+GetDataCentersByOS 0
+RequestServer 22 132 0
+RequestServer 7 94 0
+GetDataCentersByOS 0
+AddDataCenter 1 97
+GetDataCentersByOS 0
+FreeServer 23 211
+FreeServer 14 260
+RemoveDataCenter 23
+RequestServer 25 228 0
+FreeServer 26 80
+GetDataCentersByOS 1
+RemoveDataCenter 3
+FreeServer 25 209
+GetDataCentersByOS 1
+AddDataCenter 6 201
+AddDataCenter 12 313
+RemoveDataCenter 10
+RemoveDataCenter 6
+FreeServer 23 207
+RequestServer 25 82 1
+FreeServer 26 121
+GetDataCentersByOS 1
+RequestServer 2 236 1
+AddDataCenter 21 171
+RemoveDataCenter 6
+GetDataCentersByOS 0
+RemoveDataCenter 23
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+RemoveDataCenter 14
+GetDataCentersByOS 1
+RequestServer 23 68 0
+GetDataCentersByOS 0
+RequestServer 22 219 0
+RequestServer 9 92 0
+RequestServer 12 95 0
+GetDataCentersByOS 1
+AddDataCenter 6 119
+RequestServer 18 56 1
+RequestServer 4 121 1
+RemoveDataCenter 2
+GetDataCentersByOS 1
+RemoveDataCenter 17
+RequestServer 30 253 0
+RemoveDataCenter 13
+RequestServer 8 270 1
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+RequestServer 30 257 0
+RequestServer 13 113 1
+GetDataCentersByOS 0
+AddDataCenter 14 301
+RemoveDataCenter 26
+RemoveDataCenter 21
+FreeServer 29 163
+AddDataCenter 1 98
+AddDataCenter 18 302
+RemoveDataCenter 17
+RequestServer 23 84 1
+AddDataCenter 9 247
+GetDataCentersByOS 0
+AddDataCenter 23 282
+FreeServer 1 62
+RemoveDataCenter 12
+FreeServer 11 53
+AddDataCenter 28 212
+FreeServer 17 262
+RequestServer 3 154 1
+FreeServer 15 119
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+FreeServer 29 157
+GetDataCentersByOS 1
+RequestServer 24 209 0
+AddDataCenter 3 52
+GetDataCentersByOS 1
+RemoveDataCenter 20
+RemoveDataCenter 0
+GetDataCentersByOS 0
+RemoveDataCenter 16
+GetDataCentersByOS 1
+RequestServer 11 153 0
+RequestServer 22 18 0
+GetDataCentersByOS 0
+FreeServer 18 207
+RequestServer 3 193 0
+RemoveDataCenter 21
+FreeServer 1 136
+RemoveDataCenter 13
+FreeServer 29 288
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 20 65
+FreeServer 24 135
+RequestServer 25 42 0
+GetDataCentersByOS 0
+FreeServer 30 285
+FreeServer 17 81
+RequestServer 19 250 1
+RemoveDataCenter 26
+GetDataCentersByOS 0
+RequestServer 20 7 1
+GetDataCentersByOS 0
+RemoveDataCenter 6
+RemoveDataCenter 2
+FreeServer 29 29
+RemoveDataCenter 8
+AddDataCenter 10 51
+FreeServer 26 209
+AddDataCenter 6 162
+FreeServer 23 46
+GetDataCentersByOS 1
+GetDataCentersByOS 1
+GetDataCentersByOS 1
+RequestServer 17 36 0
+GetDataCentersByOS 0
+RemoveDataCenter 21
+FreeServer 11 59
+GetDataCentersByOS 1
+RemoveDataCenter 6
+RequestServer 27 5 0
+AddDataCenter 18 121
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 19 167
+RequestServer 10 249 0
+FreeServer 3 55
+RemoveDataCenter 5
+FreeServer 30 246
+RemoveDataCenter 2
+FreeServer 2 234
+GetDataCentersByOS 0
+FreeServer 16 265
+FreeServer 7 69
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+RemoveDataCenter 28
+RemoveDataCenter 5
+RequestServer 23 233 1
+FreeServer 19 299
+FreeServer 10 140
+RequestServer 26 296 1
+RequestServer 16 239 1
+FreeServer 25 109
+AddDataCenter 15 55
+GetDataCentersByOS 1
+AddDataCenter 1 104
+RequestServer 6 270 1
+RemoveDataCenter 8
+FreeServer 4 33
+FreeServer 2 20
+RequestServer 16 33 0
+GetDataCentersByOS 1
+RequestServer 8 173 1
+AddDataCenter 22 219
+FreeServer 12 110
+RequestServer 24 207 1
+FreeServer 21 253
+RequestServer 27 77 0
+RemoveDataCenter 2
+RemoveDataCenter 22
+AddDataCenter 4 89
+AddDataCenter 23 272
+FreeServer 2 206
+GetDataCentersByOS 0
+RemoveDataCenter 20
+AddDataCenter 20 96
+RemoveDataCenter 30
+AddDataCenter 23 98
+RemoveDataCenter 17
+RequestServer 24 77 1
+FreeServer 7 294
+RequestServer 1 284 1
+AddDataCenter 18 207
+RequestServer 21 283 1
+RequestServer 9 117 1
+FreeServer 2 172
+FreeServer 11 181
+AddDataCenter 4 36
+RequestServer 19 178 0
+RemoveDataCenter 1
+FreeServer 30 263
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 10 265
+RemoveDataCenter 26
+RemoveDataCenter 10
+FreeServer 19 27
+AddDataCenter 19 61
+FreeServer 23 254
+GetDataCentersByOS 0
+FreeServer 6 101
+GetDataCentersByOS 0
+FreeServer 3 84
+RequestServer 11 157 0
+GetDataCentersByOS 1
+FreeServer 10 144
+AddDataCenter 25 17
+FreeServer 21 264
+RemoveDataCenter 16
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+AddDataCenter 20 189
+FreeServer 10 79
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+AddDataCenter 25 208
+RequestServer 10 33 1
+RemoveDataCenter 6
+FreeServer 19 268
+RequestServer 26 36 1
+GetDataCentersByOS 1
+RequestServer 29 88 0
+GetDataCentersByOS 1
+FreeServer 17 6
+RemoveDataCenter 17
+RemoveDataCenter 13
+AddDataCenter 17 91
+GetDataCentersByOS 1
+AddDataCenter 3 88
+GetDataCentersByOS 0
+RemoveDataCenter 16
+RequestServer 26 161 0
+RequestServer 5 21 1
+AddDataCenter 12 274
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+FreeServer 24 116
+RequestServer 24 316 0
+RemoveDataCenter 4
+GetDataCentersByOS 1
+FreeServer 22 29
+FreeServer 15 289
+RemoveDataCenter 11
+AddDataCenter 1 224
+FreeServer 24 158
+FreeServer 7 3
+AddDataCenter 13 112
+RemoveDataCenter 4
+AddDataCenter 22 18
+GetDataCentersByOS 0
+FreeServer 27 153
+AddDataCenter 23 134
+GetDataCentersByOS 0
+FreeServer 1 41
+AddDataCenter 10 0
+RequestServer 27 79 0
+RemoveDataCenter 4
+GetDataCentersByOS 1
+FreeServer 14 59
+FreeServer 30 256
+FreeServer 3 42
+AddDataCenter 0 274
+FreeServer 30 158
+FreeServer 25 138
+FreeServer 10 206
+FreeServer 5 48
+GetDataCentersByOS 0
+FreeServer 22 318
+RemoveDataCenter 18
+RequestServer 19 259 0
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 22 157
+RequestServer 16 314 1
+RequestServer 2 264 1
+FreeServer 10 222
+FreeServer 5 65
+RemoveDataCenter 6
+RemoveDataCenter 19
+RemoveDataCenter 23
+GetDataCentersByOS 0
+FreeServer 22 138
+FreeServer 28 108
+AddDataCenter 22 313
+RemoveDataCenter 0
+RequestServer 18 160 0
+GetDataCentersByOS 0
+RequestServer 2 110 1
+RemoveDataCenter 22
+RemoveDataCenter 24
+GetDataCentersByOS 1
+AddDataCenter 15 287
+RequestServer 1 87 1
+AddDataCenter 23 100
+AddDataCenter 17 58
+GetDataCentersByOS 0
+AddDataCenter 2 278
+RemoveDataCenter 25
+RemoveDataCenter 16
+AddDataCenter 26 27
+FreeServer 22 279
+GetDataCentersByOS 0
+RemoveDataCenter 11
+RemoveDataCenter 13
+RemoveDataCenter 19
+RequestServer 29 113 0
+AddDataCenter 26 119
+GetDataCentersByOS 1
+RemoveDataCenter 2
+RemoveDataCenter 28
+RemoveDataCenter 15
+RequestServer 7 73 0
+RemoveDataCenter 30
+GetDataCentersByOS 0
+AddDataCenter 28 60
+RemoveDataCenter 25
+AddDataCenter 20 207
+AddDataCenter 1 2
+AddDataCenter 17 301
+FreeServer 11 101
+RemoveDataCenter 2
+GetDataCentersByOS 0
+AddDataCenter 12 129
+RequestServer 24 176 1
+RemoveDataCenter 0
+RequestServer 5 106 0
+FreeServer 6 8
+RequestServer 17 170 0
+RemoveDataCenter 10
+RequestServer 26 75 0
+RequestServer 19 306 0
+FreeServer 6 133
+GetDataCentersByOS 1
+FreeServer 10 234
+GetDataCentersByOS 1
+RemoveDataCenter 19
+FreeServer 20 101
+AddDataCenter 2 297
+AddDataCenter 18 112
+AddDataCenter 8 110
+RequestServer 4 271 1
+AddDataCenter 28 203
+RemoveDataCenter 11
+RemoveDataCenter 3
+AddDataCenter 21 224
+RemoveDataCenter 28
+RemoveDataCenter 23
+RemoveDataCenter 26
+FreeServer 23 9
+RemoveDataCenter 3
+FreeServer 20 186
+RemoveDataCenter 13
+AddDataCenter 26 273
+AddDataCenter 12 302
+AddDataCenter 15 128
+GetDataCentersByOS 1
+AddDataCenter 25 55
+RequestServer 28 8 1
+AddDataCenter 4 63
+RemoveDataCenter 17
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+RequestServer 25 26 0
+AddDataCenter 22 166
+RemoveDataCenter 25
+FreeServer 7 249
+RemoveDataCenter 5
+FreeServer 18 159
+FreeServer 25 194
+FreeServer 4 290
+FreeServer 23 88
+AddDataCenter 2 80
+GetDataCentersByOS 0
+RequestServer 3 20 0
+RequestServer 1 261 0
+GetDataCentersByOS 0
+RequestServer 24 68 1
+RemoveDataCenter 29
+RemoveDataCenter 24
+RequestServer 2 266 0
+FreeServer 7 190
+GetDataCentersByOS 0
+FreeServer 2 93
+RemoveDataCenter 9
+FreeServer 10 97
+GetDataCentersByOS 0
+RequestServer 3 131 0
+RequestServer 2 279 0
+GetDataCentersByOS 1
+RemoveDataCenter 18
+FreeServer 6 319
+GetDataCentersByOS 1
+RemoveDataCenter 23
+RemoveDataCenter 15
+FreeServer 25 230
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+FreeServer 2 268
+RequestServer 12 225 0
+RequestServer 7 126 1
+RequestServer 23 294 0
+FreeServer 14 30
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+AddDataCenter 12 117
+FreeServer 5 182
+FreeServer 27 213
+RequestServer 12 182 1
+RequestServer 25 192 0
+AddDataCenter 16 283
+RemoveDataCenter 15
+RequestServer 3 186 0
+FreeServer 29 196
+RemoveDataCenter 29
+RequestServer 27 240 1
+GetDataCentersByOS 0
+RemoveDataCenter 23
+RequestServer 12 220 1
+RemoveDataCenter 17
+RemoveDataCenter 4
+RequestServer 7 119 1
+RequestServer 5 70 0
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+FreeServer 0 103
+RemoveDataCenter 9
+RemoveDataCenter 27
+FreeServer 9 152
+FreeServer 26 232
+RequestServer 1 62 1
+RemoveDataCenter 0
+GetDataCentersByOS 0
+RemoveDataCenter 24
+AddDataCenter 7 304
+GetDataCentersByOS 1
+RemoveDataCenter 13
+RequestServer 13 290 1
+RemoveDataCenter 20
+RemoveDataCenter 14
+RequestServer 15 241 1
+AddDataCenter 25 310
+FreeServer 10 64
+AddDataCenter 4 108
+FreeServer 8 302
+AddDataCenter 15 264
+AddDataCenter 23 259
+AddDataCenter 2 247
+GetDataCentersByOS 0
+RemoveDataCenter 25
+FreeServer 11 168
+GetDataCentersByOS 1
+FreeServer 28 77
+RequestServer 12 310 0
+AddDataCenter 10 67
+AddDataCenter 13 84
+FreeServer 9 41
+RemoveDataCenter 8
+RemoveDataCenter 12
+RemoveDataCenter 10
+FreeServer 5 123
+RemoveDataCenter 19
+FreeServer 23 160
+GetDataCentersByOS 0
+RequestServer 8 318 1
+FreeServer 16 36
+FreeServer 4 214
+RemoveDataCenter 26
+FreeServer 25 50
+RemoveDataCenter 1
+FreeServer 24 56
+RemoveDataCenter 6
+RemoveDataCenter 15
+RequestServer 3 145 1
+RequestServer 17 176 1
+FreeServer 30 68
+RequestServer 19 217 1
+AddDataCenter 15 212
+FreeServer 24 37
+AddDataCenter 27 265
+FreeServer 2 108
+FreeServer 21 92
+AddDataCenter 26 316
+RequestServer 20 313 1
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+AddDataCenter 2 26
+RequestServer 17 320 0
+RemoveDataCenter 12
+RemoveDataCenter 17
+RequestServer 22 107 0
+AddDataCenter 14 18
+RequestServer 13 245 1
+FreeServer 23 62
+RemoveDataCenter 21
+GetDataCentersByOS 1
+FreeServer 20 70
+FreeServer 26 122
+FreeServer 14 270
+RequestServer 10 15 1
+FreeServer 24 52
+RemoveDataCenter 28
+AddDataCenter 13 191
+RemoveDataCenter 21
+AddDataCenter 25 46
+GetDataCentersByOS 1
+AddDataCenter 23 218
+RemoveDataCenter 0
+AddDataCenter 15 158
+GetDataCentersByOS 1
+RemoveDataCenter 4
+RequestServer 1 277 0
+AddDataCenter 25 69
+GetDataCentersByOS 1
+RemoveDataCenter 18
+RemoveDataCenter 29
+AddDataCenter 0 44
+GetDataCentersByOS 1
+RequestServer 21 123 1
+RequestServer 27 159 0
+AddDataCenter 28 17
+RequestServer 1 214 1
+RequestServer 16 174 0
+RequestServer 5 134 0
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+RemoveDataCenter 18
+FreeServer 15 234
+AddDataCenter 17 267
+FreeServer 14 311
+AddDataCenter 29 258
+GetDataCentersByOS 1
+AddDataCenter 24 116
+AddDataCenter 24 282
+GetDataCentersByOS 1
+FreeServer 15 308
+GetDataCentersByOS 1
+AddDataCenter 12 150
+AddDataCenter 21 202
+RemoveDataCenter 4
+FreeServer 0 268
+RemoveDataCenter 25
+RequestServer 13 8 0
+GetDataCentersByOS 0
+FreeServer 17 94
+FreeServer 0 222
+GetDataCentersByOS 0
+RemoveDataCenter 5
+AddDataCenter 7 56
+GetDataCentersByOS 0
+FreeServer 4 60
+RequestServer 5 227 0
+AddDataCenter 0 290
+GetDataCentersByOS 1
+RequestServer 19 277 1
+RemoveDataCenter 6
+GetDataCentersByOS 1
+AddDataCenter 16 15
+AddDataCenter 23 187
+RequestServer 2 247 0
+RemoveDataCenter 20
+GetDataCentersByOS 0
+GetDataCentersByOS 1
+RemoveDataCenter 1
+RequestServer 13 158 1
+FreeServer 10 147
+RequestServer 7 222 1
+AddDataCenter 11 23
+FreeServer 4 63
+FreeServer 30 126
+FreeServer 28 269
+RequestServer 28 209 1
+AddDataCenter 5 151
+RequestServer 27 272 1
+AddDataCenter 3 65
+RequestServer 29 132 1
+GetDataCentersByOS 0
+RemoveDataCenter 9
+RequestServer 28 70 1
+AddDataCenter 26 71
+FreeServer 1 272
+RemoveDataCenter 0
+AddDataCenter 30 75
+GetDataCentersByOS 1
+FreeServer 21 305
+RemoveDataCenter 5
+FreeServer 1 155
+RequestServer 7 268 0
+AddDataCenter 20 45
+RequestServer 20 256 1
+RequestServer 19 305 0
+GetDataCentersByOS 1
+RequestServer 2 188 1
+AddDataCenter 25 59
+AddDataCenter 26 204
+GetDataCentersByOS 0
+AddDataCenter 4 1
+RequestServer 25 254 0
+FreeServer 3 306
+RemoveDataCenter 1
+RemoveDataCenter 5
+AddDataCenter 2 196
+RequestServer 8 122 0
+RemoveDataCenter 4
+RequestServer 3 22 0
+FreeServer 12 262
+RemoveDataCenter 29
+GetDataCentersByOS 0
+RequestServer 23 133 0
+RemoveDataCenter 13
+RemoveDataCenter 30
+RequestServer 4 190 1
+RemoveDataCenter 12
+RequestServer 5 46 0
+FreeServer 22 218
+RemoveDataCenter 16
+AddDataCenter 9 178
+RequestServer 21 157 1
+AddDataCenter 18 100
+AddDataCenter 7 246
+GetDataCentersByOS 0
+FreeServer 14 16
+GetDataCentersByOS 0
+RequestServer 27 9 1
+AddDataCenter 21 279
+AddDataCenter 20 4
+RequestServer 10 97 1
+FreeServer 13 69
+RequestServer 29 180 0
+FreeServer 7 273
+AddDataCenter 5 128
+RemoveDataCenter 4
+FreeServer 8 292
+AddDataCenter 8 219
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 25 101
+RemoveDataCenter 26
+AddDataCenter 23 263
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+AddDataCenter 29 244
+RequestServer 7 133 1
+AddDataCenter 29 283
+RequestServer 27 36 1
+AddDataCenter 5 275
+AddDataCenter 0 28
+RemoveDataCenter 6
+GetDataCentersByOS 0
+RemoveDataCenter 8
+RequestServer 3 54 1
+RequestServer 18 179 1
+FreeServer 13 80
+RemoveDataCenter 21
+RequestServer 4 144 1
+FreeServer 12 173
+RequestServer 4 283 0
+FreeServer 12 179
+AddDataCenter 12 254
+FreeServer 27 55
+GetDataCentersByOS 1
+GetDataCentersByOS 0
+RequestServer 29 89 1
+GetDataCentersByOS 1
+RemoveDataCenter 23
+FreeServer 29 123
+AddDataCenter 26 79
+FreeServer 27 310
+AddDataCenter 23 30
+FreeServer 2 242
+AddDataCenter 20 144
+GetDataCentersByOS 0
+RemoveDataCenter 6
+FreeServer 13 59
+FreeServer 5 266
+RequestServer 26 171 0
+AddDataCenter 25 281
+RemoveDataCenter 17
+AddDataCenter 24 100
+AddDataCenter 2 77
+RemoveDataCenter 15
+RequestServer 22 69 1
+AddDataCenter 0 63
+RemoveDataCenter 25
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+FreeServer 26 271
+GetDataCentersByOS 1
+FreeServer 1 285
+RequestServer 2 116 1
+AddDataCenter 2 276
+FreeServer 10 253
+RequestServer 25 27 0
+FreeServer 13 216
+FreeServer 22 81
+GetDataCentersByOS 1
+FreeServer 10 297
+GetDataCentersByOS 1
+RemoveDataCenter 17
+GetDataCentersByOS 1
+RemoveDataCenter 7
+RequestServer 18 252 1
+RemoveDataCenter 29
+AddDataCenter 12 269
+RemoveDataCenter 12
+AddDataCenter 16 180
+RequestServer 21 316 1
+FreeServer 17 212
+AddDataCenter 11 277
+RemoveDataCenter 27
+AddDataCenter 12 140
+RequestServer 21 67 0
+RequestServer 8 215 0
+GetDataCentersByOS 1
+AddDataCenter 20 246
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+FreeServer 30 185
+FreeServer 1 314
+RequestServer 2 86 1
+GetDataCentersByOS 1
+RemoveDataCenter 8
+AddDataCenter 5 143
+AddDataCenter 5 171
+RequestServer 24 247 1
+RemoveDataCenter 17
+RemoveDataCenter 13
+AddDataCenter 23 234
+GetDataCentersByOS 0
+RequestServer 21 253 0
+FreeServer 2 111
+RequestServer 12 160 1
+FreeServer 7 222
+FreeServer 4 11
+FreeServer 3 49
+RemoveDataCenter 13
+RemoveDataCenter 16
+GetDataCentersByOS 0
+FreeServer 0 226
+RemoveDataCenter 25
+FreeServer 26 110
+AddDataCenter 15 13
+AddDataCenter 26 128
+RemoveDataCenter 25
+FreeServer 1 128
+RemoveDataCenter 3
+AddDataCenter 14 192
+GetDataCentersByOS 1
+FreeServer 12 311
+FreeServer 29 110
+RequestServer 20 137 1
+AddDataCenter 6 42
+AddDataCenter 4 148
+GetDataCentersByOS 0
+RemoveDataCenter 26
+AddDataCenter 13 281
+AddDataCenter 26 300
+GetDataCentersByOS 0
+RemoveDataCenter 0
+GetDataCentersByOS 1
+RemoveDataCenter 16
+RequestServer 15 84 1
+GetDataCentersByOS 1
+GetDataCentersByOS 1
+RequestServer 21 64 1
+RemoveDataCenter 25
+RemoveDataCenter 11
+AddDataCenter 12 126
+RemoveDataCenter 10
+AddDataCenter 10 48
+GetDataCentersByOS 0
+GetDataCentersByOS 0
+AddDataCenter 7 303
+AddDataCenter 24 132
+GetDataCentersByOS 0
+FreeServer 3 305
+GetDataCentersByOS 1
+Quit
