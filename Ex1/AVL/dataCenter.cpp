@@ -43,3 +43,17 @@ void DataCenter::remove_from_list(int OS, int ID){
         }
     }
 }
+
+
+void DataCenter::freeServer(int server_ID){
+    if(server_ID >= this->num_of_servers || server_ID < 0) throw InvalidServerID();
+    std::shared_ptr<Node<int,Server>> server_ptr = this->servers_array[server_ID];
+    server_ptr->getData().setTaken(false); //set free
+    // os linux
+    if(server_ptr->getData().getOS() == 0){
+        server_ptr->
+        this->linux_free_tail->setNext(server_ptr);
+    }
+
+
+}

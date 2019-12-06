@@ -23,3 +23,11 @@ StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, in
         return ALLOCATION_ERROR;
     }
 }
+
+StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
+    try{
+        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
+        DC_ptr->getData().freeServer(server_ID);
+        return SUCCESS;
+    }
+}

@@ -14,7 +14,9 @@ private:
     int ID;
     std::shared_ptr<Node<int,Server>>* servers_array;
     std::shared_ptr<Node<int,Server>> linux_free_head;
+    std::shared_ptr<Node<int,Server>> linux_free_tail;
     std::shared_ptr<Node<int,Server>> windows_free_head;
+    std::shared_ptr<Node<int,Server>> windows_free_tail;
     int num_of_linux;
     int num_of_windows;
     int num_of_servers;
@@ -25,7 +27,7 @@ public:
     int getNumOfWindows();
     Server* getserver();
     int assignServer(int server_ID, int OS);
-
+    void freeServer(int server_ID);
     class InvalidServerID{};
     class AllServersAreTaken{};
 };
