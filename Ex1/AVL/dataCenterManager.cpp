@@ -3,3 +3,23 @@
 //
 
 #include "dataCenterManager.h"
+StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, int* assigned_server_ID){
+    if((OS!=0 && OS!=1) || !assigned_server_ID) return INVALID_INPUT;
+    try{
+        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
+        *assigned_server_ID = DC_ptr->getData().assignServer(server_ID,OS);
+        return SUCCESS;
+    }
+    catch(Avl<int,DataCenter>::KeyNotFound& e){
+        return FAILURE;
+    }
+    catch(DataCenter::AllServersAreTaken& e){
+        return FAILURE;
+    }
+    catch(DataCenter::InvalidServerID& e){
+        return INVALID_INPUT;
+    }
+    catch(std::bad_alloc& e){
+        return ALLOCATION_ERROR;
+    }
+}

@@ -17,10 +17,17 @@ private:
     std::shared_ptr<Node<int,Server>> windows_free_head;
     int num_of_linux;
     int num_of_windows;
+    int num_of_servers;
+    void remove_from_list(int OS, int ID);
 public:
     int getID();
     int getNumOfLinux();
     int getNumOfWindows();
+    Server* getserver();
+    int assignServer(int server_ID, int OS);
+
+    class InvalidServerID{};
+    class AllServersAreTaken{};
 };
 
 #endif //AVL_DATACENTER_H

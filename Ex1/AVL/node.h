@@ -14,6 +14,7 @@ private :
 public:
     Node()= delete;
     Node(K key, D data,std::shared_ptr<Node> papa);
+
     ~Node();
     Node(const Node&)= delete;
     std::shared_ptr<Node> operator=(const Node&)= delete;
@@ -22,7 +23,7 @@ public:
     void setRight(const std::shared_ptr<Node<K,D>>& right);
     int getHeight() const;
     const K& getKey() const;
-    const D& getData() const;
+    D& getData();
     void setData(const D& data);
     std::shared_ptr<Node> getLeft();
     std::shared_ptr<Node> getRight();
@@ -30,7 +31,11 @@ public:
     void setPapa(std::shared_ptr<Node> papa);
     bool isLeaf();
     bool isRoot();
-
+    // for list use.
+    std::shared_ptr<Node> getNext();
+    std::shared_ptr<Node> getPrev();
+    void setNext(std::shared_ptr<Node> next);
+    Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next);
 };
 
 static int max(int a, int b){
@@ -75,7 +80,7 @@ const K& Node<K,D>::getKey() const{
 }
 
 template <class K, class D>
-const D& Node<K,D>::getData() const{
+D& Node<K,D>::getData(){
     return *(this->data);
 }
 template <class K, class D>
@@ -113,4 +118,13 @@ bool Node<K,D>::isRoot(){
     return this->getPapa() == nullptr;
 }
 
+template <class K, class D>
+std::shared_ptr<Node<K,D>> Node<K,D>::getNext(){
+    return this->getPapa();
+}
+
+template <class K, class D>
+void Node<K,D>::setNext(std::shared_ptr<Node<K,D>> next){
+    this->setPapa(next);
+}
 #endif
