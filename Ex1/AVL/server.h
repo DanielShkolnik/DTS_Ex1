@@ -8,6 +8,7 @@ private:
     int OS;
     bool taken;
 public:
+    Server(int ID, int OS):ID(ID),OS(OS),taken(false){};
     int getID();
     int getOS();
     void setOS(int OS);

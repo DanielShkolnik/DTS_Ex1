@@ -25,6 +25,9 @@ private:
     void appendToList(std::shared_ptr<Node<int,Server>> tail, std::shared_ptr<Node<int,Server>> server_ptr);
 public:
     int getID();
+    DataCenter(int ID, int num_of_servers);
+    int getNumOfLinux();
+    int getNumOfWindows();
     int assignServer(int server_ID, int OS);
     void freeServer(int server_ID);
     class InvalidServerID{};
