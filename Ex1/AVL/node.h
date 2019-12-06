@@ -6,7 +6,7 @@ template <class K, class D>
 class Node{
 private :
     K key;
-    D data;
+    D* data;
     std::shared_ptr<Node> left;
     std::shared_ptr<Node> right;
     std::shared_ptr<Node> papa;
@@ -14,7 +14,7 @@ private :
 public:
     Node()= delete;
     Node(K key, D data,std::shared_ptr<Node> papa);
-    ~Node()= default;
+    ~Node();
     Node(const Node&)= delete;
     std::shared_ptr<Node> operator=(const Node&)= delete;
     void calcHeight();
@@ -23,6 +23,7 @@ public:
     int getHeight() const;
     const K& getKey() const;
     const D& getData() const;
+    void setData(const D& data);
     std::shared_ptr<Node> getLeft();
     std::shared_ptr<Node> getRight();
     std::shared_ptr<Node> getPapa();
@@ -38,8 +39,12 @@ static int max(int a, int b){
 }
 
 template <class K, class D>
-Node<K,D>::Node(K key, D data, std::shared_ptr<Node<K,D>> papa):key(key),data(data),papa(papa),height(1){}
+Node<K,D>::Node(K key, D data, std::shared_ptr<Node<K,D>> papa):key(key),data(new D(data)),papa(papa),height(1){}
 
+template <class K, class D>
+Node<K,D>::~Node(){
+    delete data;
+}
 
 template <class K, class D>
 void Node<K,D>::calcHeight(){
@@ -71,7 +76,11 @@ const K& Node<K,D>::getKey() const{
 
 template <class K, class D>
 const D& Node<K,D>::getData() const{
-    return this->data;
+    return *(this->data);
+}
+template <class K, class D>
+void Node<K,D>::setData(const D& data){
+    this->data = new D(data);
 }
 
 template <class K, class D>

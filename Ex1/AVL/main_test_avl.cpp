@@ -1,7 +1,7 @@
 #include <iostream>
 #include "avl.h"
 void print_key(const std::shared_ptr<Node<int,int>>& node_ptr){
-   std::cout<<"("<<node_ptr->getKey()<<","<<node_ptr->getHeight()<<")";
+   std::cout<<"("<<node_ptr->getKey()<<","<<node_ptr->getHeight()<<","<<node_ptr->getData()<<")";
 }
 
 int main() {
@@ -48,6 +48,7 @@ int main() {
       a.insert(111,3);
       a.insert(125,3);
       a.delete_element(115);
+      a.find(125)->setData(10);
       postorder(a.getHead(),print_key);
       std::cout<<std::endl;
       std::cout<<std::endl<<"finito"<<std::endl;
