@@ -10,7 +10,7 @@ private:
     int ID;
     int num_of_servers;
 public:
-    Key()= default;
+    Key(int id, int num_of_servers):ID(id),num_of_servers(num_of_servers){}
     ~Key()= default;
     Key(const Key& key)= default;
     Key& operator=(const Key& key)= default;
