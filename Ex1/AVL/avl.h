@@ -13,7 +13,7 @@ private:
     void fix_relations(std::shared_ptr<Node<K,D>> A, std::shared_ptr<Node<K,D>> B);
 public:
     Avl():head(nullptr){}
-    ~Avl()= default;
+    ~Avl();
     Avl(const Avl& avl)= delete;
     Avl& operator=(const Avl& avl)= delete;
     void insert(const K& key, const D& data); // Daniel
@@ -300,6 +300,17 @@ void Avl<K,D>::fix_relations(std::shared_ptr<Node<K,D>> papa, std::shared_ptr<No
     son->setPapa(papa);
 }
 
+template <class K, class D>
+// inner destroy node without rolls (predicate for destructor)
+void destroy(const std::shared_ptr<Node<K,D>>& node){
+    node->setPapa(nullptr);
+    node->setRight(nullptr);
+    node->setLeft(nullptr);
+}
+template <class K, class D>
+Avl<K,D>::~Avl(){
+    postorder<K,D,void (const std::shared_ptr<Node<K,D>>& node)>(this->head,destroy);
+}
 
 
 #endif
