@@ -11,8 +11,19 @@ int DataCenter::assignServer(int server_ID, int OS){
     //server is not taken
     if(server.getTaken() == false){
         server.setTaken(true);
-        server.setOS(OS);
-        DataCenter::remove_from_list(OS,server_ID);
+        int prev_OS=server.getOS();
+        if(prev_OS!=OS){
+            server.setOS(OS);
+            if(OS==0){
+                this->num_of_linux++;
+                this->num_of_windows--;
+            }
+            else{
+                this->num_of_linux--;
+                this->num_of_windows++;
+            }
+        }
+        remove_from_list(OS,server_ID);
         return server.getID();
     }
     //server is taken
@@ -22,6 +33,8 @@ int DataCenter::assignServer(int server_ID, int OS){
             if (this->linux_free_head != nullptr) return getAndRemoveFreeServer(this->linux_free_head);
             else{
                 this->windows_free_head->getData().setOS(0);
+                this->num_of_linux--;
+                this->num_of_windows++;
                 return getAndRemoveFreeServer(this->windows_free_head);
             }
         }
@@ -30,6 +43,8 @@ int DataCenter::assignServer(int server_ID, int OS){
             if (this->windows_free_head != nullptr) return getAndRemoveFreeServer(this->windows_free_head);
             else{
                 this->linux_free_head->getData().setOS(1);
+                this->num_of_linux++;
+                this->num_of_windows--;
                 return getAndRemoveFreeServer(this->linux_free_head);
             }
         }
@@ -64,6 +79,7 @@ void DataCenter::remove_from_list(int OS, int server_ID) {
 }
 
 
+
 void DataCenter::freeServer(int server_ID){
     if(server_ID >= this->num_of_servers || server_ID < 0) throw InvalidServerID();
     std::shared_ptr<Node<int,Server>> server_ptr = this->servers_array[server_ID];
@@ -85,4 +101,21 @@ void DataCenter::freeServer(int server_ID){
 void DataCenter::appendToList(std::shared_ptr<Node<int,Server>> tail, std::shared_ptr<Node<int,Server>> server_ptr){
     server_ptr->setPrev(tail);
     tail->setNext(server_ptr);
+}
+
+int DataCenter::getID(){
+    return this->ID;
+}
+
+int DataCenter::getNumOfLinux(){
+    return this->num_of_linux;
+}
+
+int DataCenter::getNumOfWindows(){
+    return this->num_of_windows;
+}
+
+
+DataCenter(int ID, int num_of_servers){
+
 }

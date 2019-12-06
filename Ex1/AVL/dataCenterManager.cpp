@@ -8,6 +8,7 @@ StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, in
     try{
         std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
         *assigned_server_ID = DC_ptr->getData().assignServer(server_ID,OS);
+        Key key(DC_ptr->getKey(),DC_ptr->getData().getNumOfLinux())
         return SUCCESS;
     }
     catch(Avl<int,DataCenter>::KeyNotFound& e){
@@ -28,6 +29,7 @@ StatusType DataCenterManager::RemoveDataCenter(int DC_ID){
     if(DC_ID<=0) return INVALID_INPUT;
     try{
         this->DCs_by_ID.delete_element(DC_ID);
+        this->num_of_DCs--;
     }
     catch(Avl<int,DataCenter>::KeyNotFound& e){
         return FAILURE;
