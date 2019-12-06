@@ -106,8 +106,7 @@ std::shared_ptr<Node<K,D>> Avl<K,D>::find(const K& key){
     if(nearest== nullptr || nearest->getKey() != key){
         throw Avl<K,D>::KeyNotFound(); //empty tree
     }
-    if(nearest->getKey()==key)
-        return nearest;
+    else return nearest;
 }
 
 template <class K, class D>
