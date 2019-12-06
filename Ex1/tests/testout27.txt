@@ -1,0 +1,4314 @@
+init done.
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+6
+--End of data center list--
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+6
+12
+--End of data center list--
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+4
+6
+12
+--End of data center list--
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+4
+6
+--End of data center list--
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+4
+6
+--End of data center list--
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+4
+25
+--End of data center list--
+FreeServer: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+FreeServer: FAILURE
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+12
+25
+--End of data center list--
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+12
+25
+--End of data center list--
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+4
+25
+--End of data center list--
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+4
+25
+--End of data center list--
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+4
+25
+--End of data center list--
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+24
+19
+4
+17
+25
+--End of data center list--
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+12
+17
+19
+24
+25
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+4
+12
+17
+19
+24
+25
+--End of data center list--
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+12
+17
+19
+24
+25
+--End of data center list--
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+17
+19
+24
+25
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: INVALID_INPUT
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+1
+4
+6
+17
+19
+24
+25
+--End of data center list--
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+4
+5
+10
+13
+17
+19
+24
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+13
+24
+19
+4
+10
+17
+5
+--End of data center list--
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+4
+5
+10
+13
+17
+19
+24
+--End of data center list--
+FreeServer: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+13
+24
+19
+4
+10
+17
+5
+--End of data center list--
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+FreeServer: INVALID_INPUT
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: FAILURE
+AddDataCenter: INVALID_INPUT
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+4
+5
+10
+13
+17
+19
+24
+26
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+13
+24
+19
+26
+4
+10
+17
+5
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+13
+24
+19
+26
+4
+10
+17
+5
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+4
+5
+10
+13
+17
+19
+24
+26
+--End of data center list--
+FreeServer: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+23
+1
+13
+24
+19
+26
+10
+17
+2
+5
+--End of data center list--
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+5
+10
+13
+17
+19
+23
+24
+26
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+2
+5
+10
+13
+17
+19
+23
+24
+26
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+23
+1
+13
+24
+19
+26
+10
+17
+2
+5
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+23
+1
+13
+24
+19
+26
+10
+17
+2
+5
+--End of data center list--
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+23
+1
+13
+24
+19
+26
+15
+10
+17
+2
+5
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+23
+1
+13
+24
+19
+26
+15
+10
+17
+2
+5
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+2
+5
+10
+13
+15
+17
+19
+23
+24
+26
+--End of data center list--
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+5
+10
+13
+15
+17
+19
+23
+24
+26
+--End of data center list--
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+23
+1
+13
+24
+19
+26
+15
+9
+17
+2
+5
+--End of data center list--
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+5
+9
+13
+15
+17
+19
+23
+24
+26
+29
+--End of data center list--
+RequestServer: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+5
+9
+13
+15
+17
+19
+23
+24
+26
+29
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+29
+23
+1
+13
+24
+19
+26
+15
+9
+17
+2
+5
+--End of data center list--
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+29
+23
+1
+13
+24
+19
+26
+15
+9
+17
+2
+5
+--End of data center list--
+RequestServer: FAILURE
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RequestServer: 10
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+FreeServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+4
+5
+9
+13
+15
+17
+19
+23
+24
+26
+27
+29
+--End of data center list--
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+4
+5
+9
+13
+15
+17
+19
+23
+24
+26
+27
+29
+--End of data center list--
+RequestServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+29
+23
+1
+13
+24
+19
+26
+15
+9
+3
+17
+2
+5
+--End of data center list--
+AddDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+9
+12
+13
+15
+17
+19
+23
+24
+26
+27
+29
+--End of data center list--
+AddDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+AddDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+7
+6
+29
+23
+1
+13
+24
+19
+26
+15
+9
+3
+17
+2
+--End of data center list--
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+7
+6
+29
+23
+1
+13
+24
+19
+26
+15
+9
+3
+17
+2
+--End of data center list--
+FreeServer: INVALID_INPUT
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+6
+7
+9
+13
+15
+17
+19
+23
+24
+26
+27
+29
+--End of data center list--
+RequestServer: INVALID_INPUT
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+7
+6
+29
+23
+1
+13
+24
+19
+26
+15
+9
+3
+17
+2
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+27
+7
+6
+29
+23
+1
+13
+24
+19
+26
+15
+9
+3
+17
+2
+--End of data center list--
+RequestServer: 32
+AddDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+6
+7
+9
+13
+15
+17
+19
+23
+24
+26
+27
+28
+29
+--End of data center list--
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+7
+6
+29
+23
+1
+13
+28
+24
+19
+26
+15
+9
+3
+17
+2
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+6
+7
+9
+13
+15
+17
+19
+23
+24
+26
+27
+28
+29
+--End of data center list--
+RequestServer: 57
+GetDataCentersByOS: SUCCESS
+27
+7
+6
+29
+23
+1
+13
+28
+24
+19
+26
+15
+9
+3
+17
+2
+--End of data center list--
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+AddDataCenter: INVALID_INPUT
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+4
+6
+7
+9
+12
+13
+15
+17
+19
+21
+23
+24
+26
+27
+28
+29
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: 129
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+6
+7
+10
+12
+13
+15
+17
+19
+21
+23
+24
+26
+27
+28
+29
+--End of data center list--
+RequestServer: FAILURE
+AddDataCenter: SUCCESS
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+1
+2
+3
+4
+6
+7
+10
+12
+13
+15
+17
+18
+19
+21
+23
+24
+26
+27
+28
+29
+--End of data center list--
+RemoveDataCenter: SUCCESS
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+4
+7
+6
+29
+23
+1
+13
+28
+24
+19
+12
+26
+10
+15
+3
+21
+17
+2
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+27
+4
+7
+6
+29
+23
+1
+13
+28
+24
+19
+12
+26
+10
+15
+3
+21
+17
+2
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+RequestServer: 84
+GetDataCentersByOS: SUCCESS
+27
+4
+7
+6
+29
+23
+8
+1
+13
+28
+24
+19
+12
+26
+10
+15
+21
+17
+2
+--End of data center list--
+RemoveDataCenter: SUCCESS
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+27
+4
+7
+6
+29
+23
+1
+13
+8
+28
+24
+19
+12
+26
+10
+21
+17
+2
+9
+--End of data center list--
+RemoveDataCenter: SUCCESS
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+21
+22
+23
+24
+26
+28
+29
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+21
+22
+23
+24
+26
+28
+29
+--End of data center list--
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+23
+1
+13
+8
+28
+24
+19
+12
+26
+10
+22
+21
+17
+2
+9
+--End of data center list--
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+21
+22
+23
+24
+26
+28
+29
+--End of data center list--
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+21
+22
+23
+24
+26
+28
+29
+30
+--End of data center list--
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+22
+23
+26
+27
+28
+29
+30
+--End of data center list--
+RequestServer: FAILURE
+FreeServer: FAILURE
+RequestServer: 116
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+22
+23
+26
+27
+28
+29
+30
+--End of data center list--
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+23
+27
+1
+13
+8
+28
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+RequestServer: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+22
+23
+26
+27
+28
+29
+30
+--End of data center list--
+FreeServer: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: 209
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+23
+27
+1
+13
+8
+28
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+23
+27
+1
+13
+8
+28
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+23
+27
+1
+13
+8
+28
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+23
+27
+1
+13
+8
+28
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+FreeServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+1
+2
+4
+6
+7
+8
+9
+10
+12
+13
+17
+19
+22
+26
+27
+28
+29
+30
+--End of data center list--
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+27
+1
+13
+8
+28
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+4
+7
+6
+29
+15
+27
+1
+13
+8
+30
+19
+12
+26
+10
+22
+17
+2
+9
+--End of data center list--
+AddDataCenter: FAILURE
+RequestServer: 136
+AddDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+5
+4
+7
+6
+29
+15
+27
+13
+8
+30
+19
+12
+26
+23
+10
+22
+17
+2
+9
+--End of data center list--
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+15
+2
+4
+5
+6
+7
+8
+9
+10
+12
+13
+17
+19
+22
+23
+26
+27
+29
+30
+--End of data center list--
+AddDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+4
+7
+6
+29
+15
+27
+13
+30
+12
+24
+26
+23
+10
+22
+17
+2
+9
+--End of data center list--
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+29
+15
+27
+13
+30
+12
+24
+26
+23
+10
+22
+17
+2
+9
+--End of data center list--
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+29
+15
+27
+13
+30
+12
+24
+26
+23
+10
+22
+17
+2
+9
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: 141
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+29
+15
+27
+13
+30
+12
+24
+26
+23
+10
+22
+19
+17
+2
+9
+--End of data center list--
+RequestServer: INVALID_INPUT
+RequestServer: 199
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+29
+15
+27
+13
+30
+12
+24
+26
+23
+10
+22
+19
+17
+9
+--End of data center list--
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+15
+5
+6
+7
+9
+10
+12
+13
+17
+19
+22
+23
+24
+25
+26
+27
+29
+--End of data center list--
+RequestServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+RemoveDataCenter: INVALID_INPUT
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+29
+15
+25
+27
+13
+12
+24
+26
+23
+10
+22
+19
+17
+9
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+15
+5
+6
+7
+9
+10
+12
+13
+17
+19
+22
+23
+24
+25
+26
+27
+29
+--End of data center list--
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+AddDataCenter: INVALID_INPUT
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RequestServer: 36
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+12
+24
+26
+23
+10
+22
+19
+17
+9
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+FreeServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+16
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+9
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+15
+12
+1
+2
+5
+6
+7
+9
+10
+13
+16
+17
+18
+19
+23
+24
+25
+26
+27
+--End of data center list--
+FreeServer: INVALID_INPUT
+RequestServer: 186
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+15
+12
+16
+1
+2
+5
+6
+7
+10
+13
+17
+18
+19
+23
+24
+25
+26
+27
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+16
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+15
+12
+16
+1
+2
+5
+6
+7
+10
+13
+17
+18
+19
+23
+24
+25
+26
+27
+--End of data center list--
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+RequestServer: INVALID_INPUT
+RemoveDataCenter: INVALID_INPUT
+FreeServer: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+7
+6
+15
+18
+25
+27
+13
+1
+2
+12
+24
+26
+23
+10
+19
+17
+--End of data center list--
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+2
+5
+6
+7
+10
+13
+17
+18
+19
+23
+24
+25
+26
+27
+--End of data center list--
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+2
+5
+6
+10
+13
+14
+17
+18
+19
+23
+24
+25
+26
+27
+--End of data center list--
+FreeServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RequestServer: 33
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+2
+5
+6
+10
+13
+14
+17
+18
+19
+23
+24
+25
+26
+27
+--End of data center list--
+RemoveDataCenter: SUCCESS
+RequestServer: 166
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+5
+18
+6
+25
+27
+13
+2
+12
+24
+26
+10
+14
+19
+17
+--End of data center list--
+RequestServer: 76
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+2
+6
+10
+13
+14
+17
+18
+19
+24
+25
+26
+27
+--End of data center list--
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+18
+6
+25
+27
+13
+2
+12
+24
+26
+10
+14
+19
+17
+--End of data center list--
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: FAILURE
+RequestServer: FAILURE
+RequestServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+18
+6
+25
+27
+13
+2
+12
+26
+10
+14
+19
+17
+--End of data center list--
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+18
+6
+25
+27
+13
+2
+12
+28
+10
+14
+19
+17
+--End of data center list--
+FreeServer: FAILURE
+FreeServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+13
+2
+12
+28
+10
+14
+19
+17
+--End of data center list--
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+13
+2
+12
+28
+10
+14
+19
+17
+15
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: 190
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+RequestServer: FAILURE
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+25
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+26
+27
+28
+--End of data center list--
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+25
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+26
+27
+28
+--End of data center list--
+RequestServer: 38
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+26
+27
+28
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+26
+27
+28
+--End of data center list--
+AddDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+26
+27
+28
+29
+--End of data center list--
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+22
+26
+27
+28
+29
+--End of data center list--
+FreeServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+RemoveDataCenter: INVALID_INPUT
+FreeServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+17
+18
+19
+26
+27
+28
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+RequestServer: 18
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+14
+19
+17
+15
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+14
+19
+17
+15
+--End of data center list--
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+RemoveDataCenter: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+16
+17
+18
+19
+26
+27
+28
+--End of data center list--
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+14
+19
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+14
+19
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+14
+15
+16
+17
+18
+19
+26
+27
+28
+--End of data center list--
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+14
+19
+17
+15
+--End of data center list--
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+11
+18
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+19
+17
+15
+--End of data center list--
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+RequestServer: 110
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+11
+13
+15
+16
+17
+18
+19
+26
+27
+28
+--End of data center list--
+RemoveDataCenter: FAILURE
+AddDataCenter: INVALID_INPUT
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+10
+13
+15
+16
+17
+18
+19
+26
+27
+28
+--End of data center list--
+FreeServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+6
+25
+27
+16
+13
+26
+2
+12
+3
+28
+10
+19
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+6
+9
+10
+13
+15
+16
+17
+18
+19
+26
+27
+28
+--End of data center list--
+AddDataCenter: FAILURE
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+25
+12
+2
+3
+5
+6
+9
+10
+13
+15
+16
+17
+18
+19
+26
+27
+28
+30
+--End of data center list--
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+6
+30
+25
+27
+16
+13
+5
+26
+2
+12
+3
+28
+10
+19
+17
+15
+--End of data center list--
+RequestServer: 52
+RemoveDataCenter: SUCCESS
+RequestServer: FAILURE
+RequestServer: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RequestServer: 267
+AddDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+18
+9
+6
+25
+27
+16
+13
+5
+26
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+12
+18
+2
+5
+6
+9
+10
+13
+15
+16
+17
+26
+27
+28
+30
+--End of data center list--
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+6
+25
+27
+16
+13
+5
+26
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+25
+12
+18
+2
+5
+6
+9
+10
+13
+15
+16
+17
+26
+27
+28
+30
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: 235
+GetDataCentersByOS: SUCCESS
+18
+9
+25
+27
+16
+13
+5
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+5
+10
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+25
+27
+16
+13
+5
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+25
+27
+16
+13
+5
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+25
+27
+16
+13
+5
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+5
+10
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+5
+10
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+18
+9
+25
+27
+16
+13
+5
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+FreeServer: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+5
+10
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+5
+10
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+18
+9
+25
+27
+16
+13
+5
+2
+30
+12
+28
+10
+17
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+5
+10
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+2
+3
+5
+13
+15
+16
+17
+27
+28
+30
+--End of data center list--
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+AddDataCenter: INVALID_INPUT
+RemoveDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+25
+27
+16
+13
+5
+3
+30
+12
+28
+15
+--End of data center list--
+RemoveDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+25
+9
+12
+18
+3
+13
+15
+16
+19
+27
+28
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+25
+27
+16
+13
+3
+30
+12
+28
+15
+--End of data center list--
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+25
+27
+16
+13
+3
+30
+12
+28
+15
+--End of data center list--
+RemoveDataCenter: FAILURE
+RequestServer: 241
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+25
+9
+12
+3
+13
+15
+16
+19
+27
+28
+--End of data center list--
+RequestServer: 127
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+25
+27
+16
+13
+3
+12
+28
+22
+15
+--End of data center list--
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+25
+27
+16
+13
+3
+12
+28
+22
+15
+--End of data center list--
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+18
+25
+9
+12
+3
+10
+13
+15
+16
+19
+22
+27
+28
+--End of data center list--
+RequestServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+25
+9
+12
+3
+10
+13
+15
+16
+19
+22
+27
+28
+--End of data center list--
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+25
+27
+16
+13
+3
+12
+28
+22
+10
+15
+--End of data center list--
+RequestServer: FAILURE
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+RequestServer: FAILURE
+FreeServer: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+25
+9
+12
+3
+10
+13
+15
+16
+19
+22
+27
+28
+--End of data center list--
+RemoveDataCenter: FAILURE
+RequestServer: 90
+RequestServer: FAILURE
+FreeServer: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+25
+9
+12
+3
+10
+13
+15
+16
+19
+22
+27
+28
+--End of data center list--
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+RequestServer: FAILURE
+FreeServer: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+FreeServer: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+27
+16
+13
+3
+24
+12
+28
+22
+10
+15
+--End of data center list--
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+19
+9
+27
+16
+13
+3
+24
+12
+28
+22
+10
+15
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+18
+9
+12
+3
+10
+13
+15
+16
+19
+22
+24
+27
+28
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+AddDataCenter: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+18
+17
+19
+9
+27
+16
+7
+13
+3
+24
+12
+28
+22
+10
+15
+--End of data center list--
+AddDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+18
+9
+12
+3
+7
+10
+13
+15
+16
+17
+19
+22
+23
+24
+27
+28
+--End of data center list--
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+9
+12
+3
+7
+10
+13
+15
+16
+17
+19
+22
+23
+24
+27
+28
+--End of data center list--
+FreeServer: INVALID_INPUT
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+18
+17
+19
+9
+27
+16
+7
+13
+23
+3
+24
+12
+28
+22
+10
+15
+--End of data center list--
+AddDataCenter: SUCCESS
+AddDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+17
+19
+27
+16
+7
+13
+23
+3
+24
+12
+28
+22
+10
+4
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+12
+3
+4
+7
+10
+13
+16
+17
+19
+22
+23
+24
+27
+28
+--End of data center list--
+RequestServer: 71
+FreeServer: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+RequestServer: 69
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+RequestServer: 99
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RequestServer: 11
+GetDataCentersByOS: SUCCESS
+18
+12
+3
+4
+7
+8
+10
+13
+16
+17
+19
+22
+23
+27
+28
+--End of data center list--
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+FreeServer: FAILURE
+RequestServer: 171
+AddDataCenter: FAILURE
+AddDataCenter: INVALID_INPUT
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+12
+24
+3
+4
+7
+8
+10
+13
+16
+17
+19
+22
+23
+27
+28
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+18
+12
+24
+3
+4
+7
+8
+10
+13
+16
+17
+19
+22
+23
+27
+28
+--End of data center list--
+RequestServer: 96
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+12
+24
+3
+4
+7
+8
+10
+13
+16
+17
+19
+22
+23
+27
+28
+--End of data center list--
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+18
+17
+19
+8
+24
+27
+16
+7
+13
+23
+3
+12
+28
+22
+10
+4
+--End of data center list--
+RemoveDataCenter: INVALID_INPUT
+RequestServer: 69
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+17
+19
+8
+24
+27
+16
+7
+13
+23
+3
+12
+28
+22
+10
+4
+--End of data center list--
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+RequestServer: 24
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+17
+19
+8
+24
+27
+16
+7
+13
+23
+3
+12
+28
+22
+10
+4
+--End of data center list--
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+17
+19
+24
+27
+16
+7
+13
+23
+3
+12
+28
+22
+10
+4
+--End of data center list--
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+24
+27
+3
+7
+10
+13
+16
+17
+19
+22
+23
+28
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+12
+24
+27
+3
+7
+10
+13
+16
+17
+19
+22
+23
+28
+--End of data center list--
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+17
+19
+24
+27
+16
+7
+13
+23
+3
+12
+28
+22
+10
+--End of data center list--
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+24
+27
+3
+7
+8
+10
+13
+16
+17
+19
+23
+28
+--End of data center list--
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+17
+19
+24
+27
+16
+7
+13
+23
+3
+12
+28
+10
+8
+--End of data center list--
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+24
+27
+3
+7
+8
+10
+13
+16
+17
+19
+23
+28
+--End of data center list--
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+AddDataCenter: FAILURE
+RequestServer: 129
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+7
+13
+23
+3
+12
+28
+8
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: 51
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+7
+8
+14
+16
+17
+18
+19
+23
+28
+--End of data center list--
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+7
+13
+23
+3
+12
+18
+28
+8
+--End of data center list--
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+7
+13
+23
+3
+12
+18
+28
+8
+--End of data center list--
+RequestServer: FAILURE
+RequestServer: 168
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+RequestServer: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+7
+8
+14
+16
+17
+18
+19
+23
+28
+--End of data center list--
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+AddDataCenter: FAILURE
+RequestServer: 206
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+7
+13
+23
+22
+3
+12
+18
+28
+8
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: 121
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+7
+10
+13
+23
+3
+12
+18
+9
+28
+--End of data center list--
+RequestServer: FAILURE
+RemoveDataCenter: SUCCESS
+RequestServer: FAILURE
+RemoveDataCenter: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+9
+10
+14
+16
+17
+18
+19
+23
+28
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+9
+10
+14
+16
+17
+18
+19
+23
+28
+--End of data center list--
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+10
+13
+23
+3
+12
+18
+9
+28
+--End of data center list--
+AddDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+10
+29
+13
+23
+3
+12
+18
+9
+28
+--End of data center list--
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+RequestServer: FAILURE
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+9
+10
+14
+16
+17
+18
+19
+23
+28
+29
+--End of data center list--
+AddDataCenter: INVALID_INPUT
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+9
+10
+14
+16
+17
+18
+19
+23
+28
+29
+--End of data center list--
+RequestServer: 66
+AddDataCenter: FAILURE
+RequestServer: 82
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+10
+14
+16
+17
+18
+19
+23
+28
+29
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+14
+17
+19
+24
+27
+16
+10
+29
+13
+23
+3
+12
+18
+28
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+12
+13
+24
+27
+3
+10
+14
+16
+17
+18
+19
+23
+28
+29
+--End of data center list--
+AddDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+FreeServer: INVALID_INPUT
+RequestServer: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+14
+19
+24
+16
+10
+29
+23
+3
+12
+18
+28
+--End of data center list--
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+14
+19
+24
+16
+10
+29
+3
+12
+18
+28
+--End of data center list--
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+14
+15
+19
+24
+16
+10
+29
+3
+12
+18
+28
+22
+--End of data center list--
+AddDataCenter: SUCCESS
+AddDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+24
+3
+14
+15
+16
+18
+19
+22
+26
+28
+29
+--End of data center list--
+FreeServer: FAILURE
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+RequestServer: INVALID_INPUT
+RequestServer: INVALID_INPUT
+FreeServer: FAILURE
+RequestServer: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+14
+15
+19
+24
+30
+10
+16
+29
+3
+12
+18
+28
+22
+26
+--End of data center list--
+FreeServer: INVALID_INPUT
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RequestServer: FAILURE
+AddDataCenter: SUCCESS
+AddDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+24
+3
+4
+10
+15
+16
+18
+19
+22
+23
+25
+26
+27
+29
+30
+--End of data center list--
+FreeServer: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+24
+3
+4
+10
+15
+16
+18
+19
+22
+23
+25
+26
+27
+29
+30
+--End of data center list--
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+25
+27
+15
+19
+24
+30
+10
+16
+29
+4
+12
+18
+23
+22
+26
+--End of data center list--
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+25
+27
+15
+19
+24
+30
+10
+16
+29
+4
+12
+18
+23
+22
+26
+--End of data center list--
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: SUCCESS
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+25
+15
+19
+24
+30
+10
+16
+4
+12
+18
+23
+22
+26
+--End of data center list--
+FreeServer: FAILURE
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+24
+4
+15
+16
+18
+19
+22
+23
+26
+30
+--End of data center list--
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+15
+24
+30
+16
+4
+12
+18
+23
+22
+26
+--End of data center list--
+FreeServer: INVALID_INPUT
+FreeServer: FAILURE
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RemoveDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+24
+4
+13
+15
+16
+18
+22
+23
+26
+29
+30
+--End of data center list--
+RemoveDataCenter: SUCCESS
+FreeServer: FAILURE
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+24
+2
+4
+13
+15
+16
+22
+23
+26
+29
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+13
+15
+24
+30
+16
+4
+29
+2
+12
+23
+22
+26
+--End of data center list--
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+12
+24
+2
+4
+13
+15
+16
+22
+23
+26
+29
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+12
+24
+2
+4
+13
+15
+16
+22
+23
+26
+29
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+13
+15
+24
+30
+16
+4
+29
+2
+12
+23
+22
+26
+--End of data center list--
+AddDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+RequestServer: 29
+AddDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+13
+15
+24
+30
+16
+4
+29
+8
+2
+12
+23
+22
+26
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+13
+15
+24
+30
+16
+4
+29
+8
+2
+12
+23
+22
+26
+--End of data center list--
+RequestServer: INVALID_INPUT
+RemoveDataCenter: FAILURE
+FreeServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+24
+2
+4
+8
+13
+15
+16
+22
+23
+26
+29
+30
+--End of data center list--
+RemoveDataCenter: FAILURE
+RequestServer: INVALID_INPUT
+RemoveDataCenter: FAILURE
+RemoveDataCenter: SUCCESS
+GetDataCentersByOS: SUCCESS
+12
+2
+4
+8
+13
+15
+16
+22
+23
+26
+29
+30
+--End of data center list--
+AddDataCenter: SUCCESS
+FreeServer: FAILURE
+RequestServer: INVALID_INPUT
+GetDataCentersByOS: SUCCESS
+12
+2
+4
+8
+13
+15
+16
+22
+23
+25
+26
+29
+30
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+12
+2
+4
+8
+13
+15
+16
+22
+23
+25
+26
+29
+30
+--End of data center list--
+RequestServer: INVALID_INPUT
+AddDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+13
+15
+25
+30
+16
+4
+29
+8
+2
+12
+23
+22
+26
+--End of data center list--
+RemoveDataCenter: FAILURE
+GetDataCentersByOS: SUCCESS
+13
+15
+25
+30
+16
+4
+29
+8
+2
+12
+23
+22
+26
+--End of data center list--
+GetDataCentersByOS: SUCCESS
+12
+2
+4
+8
+13
+15
+16
+22
+23
+25
+26
+29
+30
+--End of data center list--
+FreeServer: INVALID_INPUT
+RemoveDataCenter: SUCCESS
+RemoveDataCenter: FAILURE
+RequestServer: FAILURE
+RemoveDataCenter: FAILURE
+AddDataCenter: FAILURE
+FreeServer: FAILURE
+FreeServer: FAILURE
+FreeServer: INVALID_INPUT
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+RemoveDataCenter: FAILURE
+FreeServer: FAILURE
+quit done.
