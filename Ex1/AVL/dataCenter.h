@@ -38,4 +38,5 @@ public:
     class ServerIsAlreadyFree{};
 };
 
+void fix_relations_9000(std::shared_ptr<Node<int,Server>>& dc1, std::shared_ptr<Node<int,Server>>& dc2);
 #endif //AVL_DATACENTER_H

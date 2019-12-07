@@ -196,10 +196,31 @@ DataCenter::DataCenter(const DataCenter& dc){
         this->servers_array[i] = std::shared_ptr<Node<int,Server>>(new Node<int,Server>(dc.servers_array[i]->getKey(),
                                                                     dc.servers_array[i]->getData()));
     }
-    this->linux_free_head = dc.linux_free_head;
-    this->linux_free_tail = dc.linux_free_tail;
-    this->windows_free_head = dc.windows_free_head;
-    this->windows_free_tail = dc.windows_free_tail;
+    std::shared_ptr<Node<int,Server>> current_l = dc.linux_free_head;
+    while(current_l){
+        std::shared_ptr<Node<int,Server>> prev_l = current_l;
+        current_l = current_l->getNext();
+        if(current_l != nullptr) fix_relations_9000(this->servers_array[prev_l->getKey()],this->servers_array[current_l->getKey()]);
+    }
+
+    std::shared_ptr<Node<int,Server>> current_w = dc.windows_free_head;
+    while(current_w){
+        std::shared_ptr<Node<int,Server>> prev_w = current_w;
+        current_w = current_w->getNext();
+        if(current_w != nullptr) fix_relations_9000(this->servers_array[prev_w->getKey()],this->servers_array[current_w->getKey()]);
+    }
+
+    if(dc.linux_free_head != nullptr)this->linux_free_head = this->servers_array[dc.linux_free_head->getKey()];
+    else this->linux_free_head = nullptr;
+
+    if(dc.linux_free_tail != nullptr)this->linux_free_tail = this->servers_array[dc.linux_free_tail->getKey()];
+    else this->linux_free_tail = nullptr;
+
+    if(dc.windows_free_head != nullptr) this->windows_free_head = this->servers_array[dc.windows_free_head->getKey()];
+    else this->windows_free_head = nullptr;
+
+    if(dc.windows_free_tail != nullptr) this->windows_free_tail = this->servers_array[dc.windows_free_tail->getKey()];
+    else this->windows_free_tail = nullptr;
 }
 
 DataCenter& DataCenter::operator=(const DataCenter& dc){

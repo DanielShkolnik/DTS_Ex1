@@ -36,7 +36,8 @@ public:
     std::shared_ptr<Node> getPrev();
     void setPrev(const std::shared_ptr<Node>& prev);
     void setNext(const std::shared_ptr<Node>& next);
-    Node(K key, D data,std::shared_ptr<Node> prev = nullptr,std::shared_ptr<Node> next = nullptr);
+    Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next);
+    Node(K key, D data);
 };
 
 static int max(int a, int b){
@@ -141,6 +142,7 @@ void Node<K,D>::setPrev(const std::shared_ptr<Node<K, D>>& prev){
 
 template <class K, class D>
 Node<K,D>::Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next):key(key),data(new D(data)),left(prev),right(next),height(1){}
-
+template <class K, class D>
+Node<K,D>::Node(K key, D data):key(key),data(new D(data)),left(nullptr),right(nullptr),height(1){}
 
 #endif
