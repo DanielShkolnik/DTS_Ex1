@@ -23,7 +23,7 @@ int DataCenter::assignServer(int server_ID, int OS){
                 this->num_of_windows++;
             }
         }
-        remove_from_list(OS,server_ID);
+        remove_from_list(prev_OS,server_ID);
         return server.getID();
     }
     //server is taken

@@ -169,6 +169,7 @@ void Avl<K,D>::delete_element(const K& key){
 }
 template <class K, class D>
 bool is_left_son(std::shared_ptr<Node<K,D>> node){
+    if(node->getPapa()->getLeft()== nullptr) return false;
     return node->getPapa()->getLeft()->getKey()==node->getKey();
 }
 template <class K, class D>

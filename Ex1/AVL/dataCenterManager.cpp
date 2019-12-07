@@ -57,7 +57,7 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
     if(!data_centers || (OS!=0 && OS!=1) || !num_of_data_servers) return INVALID_INPUT;
     if(this->DCs_by_ID.getHead()== nullptr) return FAILURE;
     try{
-        AddToArray pred(data_centers);
+        AddToArray pred(*data_centers);
         //linux servers
         if(OS==0){
             inorder<Key,DataCenter,AddToArray>(this->DCs_by_NumOfLinux.getHead(),pred);
@@ -104,6 +104,7 @@ StatusType DataCenterManager::AddDataCenter(int DC_ID, int num_of_servers){
         this->DCs_by_ID.insert(DC_ID,dc);
         this->DCs_by_NumOfLinux.insert(key_linux,dc);
         this->DCs_by_NumOfWindows.insert(key_windows,dc);
+        this->num_of_DCs++;
         return SUCCESS;
     }
     catch(std::bad_alloc& e){
