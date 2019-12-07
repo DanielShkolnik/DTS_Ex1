@@ -85,7 +85,7 @@ static bool isInit = false;
 
 int main(int argc, const char**argv) {
     std::string line;
-    std::ifstream myfile ("in1.txt");
+    std::ifstream myfile ("test1.txt");
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
