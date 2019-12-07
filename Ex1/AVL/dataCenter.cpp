@@ -131,7 +131,7 @@ void DataCenter::appendToList(int OS, std::shared_ptr<Node<int,Server>>& server_
 
 }
 
-int DataCenter::getID() const{
+int DataCenter::getID(){
     return this->ID;
 }
 
@@ -144,9 +144,8 @@ int DataCenter::getNumOfWindows(){
 }
 
 
-DataCenter::DataCenter(int ID, int num_of_servers):
-    ID(ID),servers_array(new std::shared_ptr<Node<int,Server>>[num_of_servers]),windows_free_head(nullptr)
-    ,windows_free_tail(nullptr),num_of_linux(num_of_servers),num_of_windows(0),num_of_servers(num_of_servers){
+DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std::shared_ptr<Node<int,Server>>[num_of_servers]),windows_free_head(nullptr)
+                        ,windows_free_tail(nullptr),num_of_linux(num_of_servers),num_of_windows(0),num_of_servers(num_of_servers){
     Server server(0,0);
     std::shared_ptr<Node<int,Server>> current_server_ptr(new Node<int,Server>(0,server, nullptr, nullptr));
     this->servers_array[0]=current_server_ptr;
