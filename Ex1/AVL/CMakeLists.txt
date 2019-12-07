@@ -3,4 +3,4 @@ project(AVL)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(AVL main1.cpp avl.h node.h server.cpp server.h dataCenter.cpp dataCenter.h dataCenterManager.cpp dataCenterManager.h library1.h library.cpp key.h key.cpp)
+add_executable(AVL main1.cpp avl.h node.h server.cpp server.h dataCenter.cpp dataCenter.h dataCenterManager.cpp dataCenterManager.h library1.h library.cpp key.h key.cpp main_test.cpp)
