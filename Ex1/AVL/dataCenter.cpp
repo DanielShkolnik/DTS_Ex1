@@ -10,7 +10,7 @@ int DataCenter::assignServer(int server_ID, int OS){
     Server& server = this->servers_array[server_ID]->getData();
     //server is not taken
     if(server.getTaken() == false){
-        server.setTaken(true); // sadsada
+        server.setTaken(true);
         int prev_OS=server.getOS();
         if(prev_OS!=OS){
             server.setOS(OS);
