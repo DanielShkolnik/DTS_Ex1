@@ -57,6 +57,8 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
     if(!data_centers || (OS!=0 && OS!=1) || !num_of_data_servers) return INVALID_INPUT;
     if(this->DCs_by_ID.getHead()== nullptr) return FAILURE;
     try{
+        *data_centers = new int[this->num_of_DCs];
+        *num_of_data_servers = this->num_of_DCs;
         AddToArray pred(*data_centers);
         //linux servers
         if(OS==0){

@@ -27,5 +27,6 @@ StatusType GetDataCentersByOS(void *DS, int os, int **dataCenters, int* numOfDat
 }
 
 void Quit(void** DS){
-    delete (DataCenterManager **)DS;
+    delete *(DataCenterManager **)DS;
+    *DS = nullptr;
 }

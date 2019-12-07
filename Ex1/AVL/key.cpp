@@ -12,7 +12,7 @@ bool Key::operator<(const Key& other) const {
     return false;
 }
 bool Key::operator>(const Key& other) const {
-    return !(this->operator<(other));
+    return !(this->operator<(other) || this->operator==(other));
 }
 bool Key::operator==(const Key& other) const{
     return (this->ID==other.ID && this->num_of_servers==other.num_of_servers);

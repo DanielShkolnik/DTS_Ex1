@@ -147,7 +147,7 @@ void Avl<K,D>::delete_element(const K& key){
         }
         // path is only one to the left
         if(current == nearest->getLeft()){
-            fix_relations(nearest->getPapa(),current);
+            if (nearest->getPapa() != nullptr)fix_relations(nearest->getPapa(),current);
             if(nearest->getRight() != nullptr) fix_relations(current,nearest->getRight());
             else current->setRight(nullptr);
             this->fix_BFs(current);
@@ -259,7 +259,7 @@ void Avl<K,D>::fix_BFs(std::shared_ptr<Node<K,D>> node){
 
 
 template <class K, class D, class P>
-void inorder(std::shared_ptr<Node<K,D>> node, P predicate){
+void inorder(std::shared_ptr<Node<K,D>> node, P& predicate){
     if (node== nullptr) return;
     inorder(node->getLeft(),predicate);
     predicate(node);

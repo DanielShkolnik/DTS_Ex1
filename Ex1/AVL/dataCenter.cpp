@@ -33,8 +33,8 @@ int DataCenter::assignServer(int server_ID, int OS){
             if (this->linux_free_head != nullptr) return getAndRemoveFreeServer(0);
             else{
                 this->windows_free_head->getData().setOS(0);
-                this->num_of_linux--;
-                this->num_of_windows++;
+                this->num_of_linux++;
+                this->num_of_windows--;
                 return getAndRemoveFreeServer(1);
             }
         }
@@ -43,8 +43,8 @@ int DataCenter::assignServer(int server_ID, int OS){
             if (this->windows_free_head != nullptr) return getAndRemoveFreeServer(1);
             else{
                 this->linux_free_head->getData().setOS(1);
-                this->num_of_linux++;
-                this->num_of_windows--;
+                this->num_of_linux--;
+                this->num_of_windows++;
                 return getAndRemoveFreeServer(0);
             }
         }
