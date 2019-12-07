@@ -217,3 +217,9 @@ DataCenter& DataCenter::operator=(const DataCenter& dc){
     this->windows_free_tail = dc.windows_free_tail;
     return *this;
 }
+
+void fix_relations_9000(std::shared_ptr<Node<int,Server>>& dc1, std::shared_ptr<Node<int,Server>>& dc2){
+    if(dc1== nullptr) dc2->setPrev(nullptr);
+
+}
+
