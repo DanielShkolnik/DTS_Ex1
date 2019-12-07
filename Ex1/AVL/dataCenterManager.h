@@ -35,7 +35,10 @@ public:
         (this->IDs_array)[i] = node->getData().getID();
         i++;
     }
-    AddToArray(int* array):i(0),IDs_array(array){}
+    explicit AddToArray(int* array):i(0),IDs_array(array){};
+    ~AddToArray(){
+        delete[] this->IDs_array;
+    }
 };
 
 #endif //AVL_DATACENTERMANAGER_H
