@@ -14,16 +14,16 @@ private :
     ListNode* prev;
     public:
     ListNode()= default;
-    ListNode(Server* server, ListNode* next = nullptr, ListNode* prev = nullptr):server(new Server(server)),next(next),prev(prev);
+    explicit ListNode(Server* server, ListNode* next = nullptr, ListNode* prev = nullptr):server(new Server(server)),next(next),prev(prev);
     ~ListNode(); //delete new Server
     ListNode(const ListNode& ListNode);
     ListNode& operator=(const ListNode& ListNode);
-    void setNext(const ListNode& next);
-    void setPrev(const ListNode& prev);
+    void setNext(ListNode* next);
+    void setPrev(ListNode* prev);
     ListNode* getNext();
     ListNode* getPrev();
     Server* getServer();
-    void setServer(const Server& server);
+    void setServer(Server* server);
 };
 
 
