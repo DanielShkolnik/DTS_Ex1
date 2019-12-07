@@ -24,8 +24,10 @@ private:
     int getAndRemoveFreeServer(int OS);
     void appendToList(int OS, std::shared_ptr<Node<int,Server>>& server_ptr);
 public:
-    int getID();
+    int getID() const;
     DataCenter(int ID, int num_of_servers);
+    ~DataCenter();
+    DataCenter(const DataCenter& dc);
     int getNumOfLinux();
     int getNumOfWindows();
     int assignServer(int server_ID, int OS);
