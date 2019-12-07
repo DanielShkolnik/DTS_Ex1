@@ -6,7 +6,7 @@
 StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, int* assigned_server_ID){
     if((OS!=0 && OS!=1) || !assigned_server_ID) return INVALID_INPUT;
     try{
-        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
+        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID); //asdasd
         Key prev_key_linux(DC_ptr->getKey(),DC_ptr->getData().getNumOfLinux());
         Key prev_key_windows(DC_ptr->getKey(),DC_ptr->getData().getNumOfWindows());
         *assigned_server_ID = DC_ptr->getData().assignServer(server_ID,OS);
