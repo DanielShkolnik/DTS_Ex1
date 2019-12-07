@@ -220,6 +220,8 @@ DataCenter& DataCenter::operator=(const DataCenter& dc){
 
 void fix_relations_9000(std::shared_ptr<Node<int,Server>>& dc1, std::shared_ptr<Node<int,Server>>& dc2){
     if(dc1== nullptr) dc2->setPrev(nullptr);
-
+    if(dc2== nullptr) dc1->setNext(nullptr);
+    dc1->setNext(dc2);
+    dc2->setPrev(dc1);
 }
 
