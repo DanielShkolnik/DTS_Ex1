@@ -116,16 +116,17 @@ int DataCenter::getNumOfWindows(){
 }
 
 
-DataCenter::DataCenter(int ID, int num_of_servers):ID(ID),num_of_linux(num_of_servers),num_of_windows(0),num_of_servers(num_of_servers),
-                        servers_array(new std::shared_ptr<Node<int,Server>>[num_of_servers]),windows_free_head(nullptr),
-                        windows_free_tail(nullptr){
+DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std::shared_ptr<Node<int,Server>>[num_of_servers]),windows_free_head(nullptr)
+                        ,windows_free_tail(nullptr),num_of_linux(num_of_servers),num_of_windows(0),num_of_servers(num_of_servers){
     Server server(0,0);
     std::shared_ptr<Node<int,Server>> current_server_ptr(new Node<int,Server>(0,server, nullptr, nullptr));
+    this->servers_array[0]=current_server_ptr;
     this->linux_free_head=current_server_ptr;
     for(int i=1; i<num_of_servers; i++){
         server=Server(i,0);
         std::shared_ptr<Node<int,Server>> next_server_ptr(new Node<int,Server>(i,server, current_server_ptr, nullptr));
         current_server_ptr->setNext(next_server_ptr);
+        this->servers_array[i]=next_server_ptr;
         current_server_ptr=next_server_ptr;
     }
     this->linux_free_tail=current_server_ptr;
