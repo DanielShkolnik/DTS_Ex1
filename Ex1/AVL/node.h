@@ -36,7 +36,7 @@ public:
     std::shared_ptr<Node> getPrev();
     void setPrev(const std::shared_ptr<Node>& prev);
     void setNext(const std::shared_ptr<Node>& next);
-    Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next);
+    Node(K key, D data,std::shared_ptr<Node> prev = nullptr,std::shared_ptr<Node> next = nullptr);
 };
 
 static int max(int a, int b){

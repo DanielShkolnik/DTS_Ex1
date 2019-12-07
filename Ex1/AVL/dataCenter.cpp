@@ -162,7 +162,28 @@ DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std
 
 
 DataCenter::~DataCenter(){
+    std::shared_ptr<Node<int,Server>> current_w = this->windows_free_head;
+    while (current_w){
+        std::shared_ptr<Node<int,Server>> prev_w = current_w;
+        prev_w->setPrev(nullptr);
+        prev_w->setNext(nullptr);
+        current_w = current_w->getNext();
+    }
+
+    std::shared_ptr<Node<int,Server>> current_l = this->linux_free_head;
+    while (current_l){
+        std::shared_ptr<Node<int,Server>> prev_l = current_l;
+        prev_l->setPrev(nullptr);
+        prev_l->setNext(nullptr);
+        current_l = current_l->getNext();
+    }
+    this->linux_free_head = nullptr;
+    this->linux_free_tail = nullptr;
+    this->windows_free_head = nullptr;
+    this->windows_free_tail = nullptr;
+
     delete[] this->servers_array;
+    this->servers_array = nullptr;
 }
 
 DataCenter::DataCenter(const DataCenter& dc){
@@ -172,7 +193,8 @@ DataCenter::DataCenter(const DataCenter& dc){
     this->num_of_servers = dc.num_of_servers;
     this->servers_array = new std::shared_ptr<Node<int,Server>>[dc.num_of_servers];
     for(int i=0; i<dc.num_of_servers; i++){
-        this->servers_array[i] = dc.servers_array[i];
+        this->servers_array[i] = std::shared_ptr<Node<int,Server>>(new Node<int,Server>(dc.servers_array[i]->getKey(),
+                                                                    dc.servers_array[i]->getData()));
     }
     this->linux_free_head = dc.linux_free_head;
     this->linux_free_tail = dc.linux_free_tail;
