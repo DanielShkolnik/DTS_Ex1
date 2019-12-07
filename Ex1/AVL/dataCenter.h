@@ -27,6 +27,8 @@ public:
     int getID();
     DataCenter(int ID, int num_of_servers);
     ~DataCenter();
+    DataCenter& operator=(const DataCenter& dc);
+    DataCenter(const DataCenter& dc);
     int getNumOfLinux();
     int getNumOfWindows();
     int assignServer(int server_ID, int OS);

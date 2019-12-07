@@ -160,6 +160,38 @@ DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std
     this->linux_free_tail=current_server_ptr;
 }
 
+
 DataCenter::~DataCenter(){
     delete[] this->servers_array;
+}
+
+DataCenter::DataCenter(const DataCenter& dc){
+    this->ID = dc.ID;
+    this->num_of_linux = dc.num_of_linux;
+    this->num_of_windows = dc.num_of_windows;
+    this->num_of_servers = dc.num_of_servers;
+    this->servers_array = new std::shared_ptr<Node<int,Server>>[dc.num_of_servers];
+    for(int i=0; i<dc.num_of_servers; i++){
+        this->servers_array[i] = dc.servers_array[i];
+    }
+    this->linux_free_head = dc.linux_free_head;
+    this->linux_free_tail = dc.linux_free_tail;
+    this->windows_free_head = dc.windows_free_head;
+    this->windows_free_tail = dc.windows_free_tail;
+}
+
+DataCenter& DataCenter::operator=(const DataCenter& dc){
+    this->ID = dc.ID;
+    this->num_of_linux = dc.num_of_linux;
+    this->num_of_windows = dc.num_of_windows;
+    this->num_of_servers = dc.num_of_servers;
+    this->servers_array = new std::shared_ptr<Node<int,Server>>[dc.num_of_servers];
+    for(int i=0; i<dc.num_of_servers; i++){
+        this->servers_array[i] = dc.servers_array[i];
+    }
+    this->linux_free_head = dc.linux_free_head;
+    this->linux_free_tail = dc.linux_free_tail;
+    this->windows_free_head = dc.windows_free_head;
+    this->windows_free_tail = dc.windows_free_tail;
+    return *this;
 }
