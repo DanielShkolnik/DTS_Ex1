@@ -23,6 +23,8 @@ private:
     void remove_from_list(int OS, int ID);
     int getAndRemoveFreeServer(int OS);
     void appendToList(int OS, std::shared_ptr<Node<int,Server>>& server_ptr);
+    void deleteList();
+    void copyArrayAndList(const DataCenter& dc);
 public:
     int getID();
     DataCenter(int ID, int num_of_servers);

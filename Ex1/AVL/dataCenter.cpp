@@ -162,21 +162,7 @@ DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std
 
 
 DataCenter::~DataCenter(){
-    std::shared_ptr<Node<int,Server>> current_w = this->windows_free_head;
-    while (current_w){
-        std::shared_ptr<Node<int,Server>> prev_w = current_w;
-        current_w = current_w->getNext();
-        prev_w->setPrev(nullptr);
-        prev_w->setNext(nullptr);
-    }
-
-    std::shared_ptr<Node<int,Server>> current_l = this->linux_free_head;
-    while (current_l){
-        std::shared_ptr<Node<int,Server>> prev_l = current_l;
-        current_l = current_l->getNext();
-        prev_l->setPrev(nullptr);
-        prev_l->setNext(nullptr);
-    }
+    this->deleteList();
     this->linux_free_head = nullptr;
     this->linux_free_tail = nullptr;
     this->windows_free_head = nullptr;
@@ -192,9 +178,50 @@ DataCenter::DataCenter(const DataCenter& dc){
     this->num_of_windows = dc.num_of_windows;
     this->num_of_servers = dc.num_of_servers;
     this->servers_array = new std::shared_ptr<Node<int,Server>>[dc.num_of_servers];
+    this->copyArrayAndList(dc);
+}
+
+DataCenter& DataCenter::operator=(const DataCenter& dc){
+    this->ID = dc.ID;
+    this->num_of_linux = dc.num_of_linux;
+    this->num_of_windows = dc.num_of_windows;
+    this->num_of_servers = dc.num_of_servers;
+    this->deleteList();
+    delete[] this->servers_array;
+    this->servers_array = new std::shared_ptr<Node<int,Server>>[dc.num_of_servers];
+    this->copyArrayAndList(dc);
+    return *this;
+}
+
+void fix_relations_9000(std::shared_ptr<Node<int,Server>>& dc1, std::shared_ptr<Node<int,Server>>& dc2){
+    if(dc1== nullptr) dc2->setPrev(nullptr);
+    if(dc2== nullptr) dc1->setNext(nullptr);
+    dc1->setNext(dc2);
+    dc2->setPrev(dc1);
+}
+
+void DataCenter::deleteList(){
+    std::shared_ptr<Node<int,Server>> current_w = this->windows_free_head;
+    while (current_w){
+        std::shared_ptr<Node<int,Server>> prev_w = current_w;
+        current_w = current_w->getNext();
+        prev_w->setPrev(nullptr);
+        prev_w->setNext(nullptr);
+    }
+
+    std::shared_ptr<Node<int,Server>> current_l = this->linux_free_head;
+    while (current_l){
+        std::shared_ptr<Node<int,Server>> prev_l = current_l;
+        current_l = current_l->getNext();
+        prev_l->setPrev(nullptr);
+        prev_l->setNext(nullptr);
+    }
+}
+
+void DataCenter::copyArrayAndList(const DataCenter& dc){
     for(int i=0; i<dc.num_of_servers; i++){
         this->servers_array[i] = std::shared_ptr<Node<int,Server>>(new Node<int,Server>(dc.servers_array[i]->getKey(),
-                                                                    dc.servers_array[i]->getData()));
+                                                                                        dc.servers_array[i]->getData()));
     }
     std::shared_ptr<Node<int,Server>> current_l = dc.linux_free_head;
     while(current_l){
@@ -221,28 +248,5 @@ DataCenter::DataCenter(const DataCenter& dc){
 
     if(dc.windows_free_tail != nullptr) this->windows_free_tail = this->servers_array[dc.windows_free_tail->getKey()];
     else this->windows_free_tail = nullptr;
-}
-
-DataCenter& DataCenter::operator=(const DataCenter& dc){
-    this->ID = dc.ID;
-    this->num_of_linux = dc.num_of_linux;
-    this->num_of_windows = dc.num_of_windows;
-    this->num_of_servers = dc.num_of_servers;
-    this->servers_array = new std::shared_ptr<Node<int,Server>>[dc.num_of_servers];
-    for(int i=0; i<dc.num_of_servers; i++){
-        this->servers_array[i] = dc.servers_array[i];
-    }
-    this->linux_free_head = dc.linux_free_head;
-    this->linux_free_tail = dc.linux_free_tail;
-    this->windows_free_head = dc.windows_free_head;
-    this->windows_free_tail = dc.windows_free_tail;
-    return *this;
-}
-
-void fix_relations_9000(std::shared_ptr<Node<int,Server>>& dc1, std::shared_ptr<Node<int,Server>>& dc2){
-    if(dc1== nullptr) dc2->setPrev(nullptr);
-    if(dc2== nullptr) dc1->setNext(nullptr);
-    dc1->setNext(dc2);
-    dc2->setPrev(dc1);
 }
 
