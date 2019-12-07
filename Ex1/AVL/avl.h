@@ -18,7 +18,7 @@ public:
     Avl& operator=(const Avl& avl)= delete;
     void insert(const K& key, const D& data); // Daniel
     void delete_element(const K& key); // Omer
-    const D& find(const K& key); // Omer
+    D& find(const K& key); // Omer
     std::shared_ptr<Node<K,D>> getHead();
     int getBF(std::shared_ptr<Node<K,D>> node); // Dainel
     void rotateLL(std::shared_ptr<Node<K,D>> node); // Omer
@@ -101,7 +101,7 @@ void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
     A->calcHeight();
 }
 template <class K, class D>
-const D& Avl<K,D>::find(const K& key){
+D& Avl<K,D>::find(const K& key){
     std::shared_ptr<Node<K,D>> nearest = this->find_nearest(key);
     if(nearest== nullptr || nearest->getKey() != key){
         throw Avl<K,D>::KeyNotFound(); //empty tree
