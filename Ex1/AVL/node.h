@@ -16,8 +16,8 @@ public:
     Node(K key, D data,std::shared_ptr<Node> papa);
 
     ~Node();
-    Node(const Node& node) = delete;
-    Node& operator=(const Node& node) = delete;
+    Node(const Node&)= delete;
+    std::shared_ptr<Node> operator=(const Node&)= delete;
     void calcHeight();
     void setLeft(const std::shared_ptr<Node<K,D>>& left);
     void setRight(const std::shared_ptr<Node<K,D>>& right);
@@ -141,27 +141,6 @@ void Node<K,D>::setPrev(const std::shared_ptr<Node<K, D>>& prev){
 
 template <class K, class D>
 Node<K,D>::Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next):key(key),data(new D(data)),left(prev),right(next),height(1){}
-/*
-template <class K, class D>
-Node<K,D>::Node(const Node& node){
-    this->key = node.getKey();
-    this->data = new D(node.getData());
-    this->left = node.getLeft();
-    this->right = node.getRight();
-    this->papa = node.getPapa();
-    this->height = node.getHeight();
-}
 
-template <class K, class D>
-Node<K,D>& Node<K,D>::operator=(const Node& node){
-    delete this->data;
-    this->key = node.getKey();
-    this->data = new D(node.getData());
-    this->left = node.getLeft();
-    this->right = node.getRight();
-    this->papa = node.getPapa();
-    this->height = node.getHeight();
-    return *this;
-}
-*/
+
 #endif
