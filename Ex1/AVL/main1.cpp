@@ -17,6 +17,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <iostream>
+#include <fstream>
 #include "library1.h"
 
 #ifdef __cplusplus
@@ -82,15 +84,20 @@ static bool isInit = false;
 /***************************************************************************/
 
 int main(int argc, const char**argv) {
+    std::string line;
+    std::ifstream myfile ("in1.txt");
+    if (myfile.is_open())
+    {
+        while ( getline (myfile,line) )
+        {
+            if (parser(line.c_str()) == error)
+                break;
+        }
+        myfile.close();
+    }
 
-    char buffer[MAX_STRING_INPUT_SIZE];
+    else std::cout << "Unable to open file";
 
-    // Reading commands
-    while (fgets(buffer, MAX_STRING_INPUT_SIZE, stdin) != NULL) {
-        fflush(stdout);
-        if (parser(buffer) == error)
-            break;
-    };
     return 0;
 }
 
