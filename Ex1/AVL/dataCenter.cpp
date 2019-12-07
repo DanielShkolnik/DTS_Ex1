@@ -165,17 +165,17 @@ DataCenter::~DataCenter(){
     std::shared_ptr<Node<int,Server>> current_w = this->windows_free_head;
     while (current_w){
         std::shared_ptr<Node<int,Server>> prev_w = current_w;
+        current_w = current_w->getNext();
         prev_w->setPrev(nullptr);
         prev_w->setNext(nullptr);
-        current_w = current_w->getNext();
     }
 
     std::shared_ptr<Node<int,Server>> current_l = this->linux_free_head;
     while (current_l){
         std::shared_ptr<Node<int,Server>> prev_l = current_l;
+        current_l = current_l->getNext();
         prev_l->setPrev(nullptr);
         prev_l->setNext(nullptr);
-        current_l = current_l->getNext();
     }
     this->linux_free_head = nullptr;
     this->linux_free_tail = nullptr;
