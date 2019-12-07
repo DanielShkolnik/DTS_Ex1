@@ -164,9 +164,3 @@ DataCenter::DataCenter(int ID, int num_of_servers):
 DataCenter::~DataCenter(){
     delete[] this->servers_array;
 }
-
-DataCenter::DataCenter(const DataCenter& dc):
-ID(dc.ID),servers_array(new std::shared_ptr<Node<int,Server>>[dc.num_of_servers]),windows_free_head(nullptr)
-        ,windows_free_tail(nullptr),num_of_linux(dc.num_of_linux),num_of_windows(dc.num_of_windows),num_of_servers(dc.num_of_servers){
-
-}
