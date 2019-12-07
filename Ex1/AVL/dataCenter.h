@@ -21,8 +21,8 @@ private:
     int num_of_windows;
     int num_of_servers;
     void remove_from_list(int OS, int ID);
-    int getAndRemoveFreeServer(std::shared_ptr<Node<int,Server>>& list);
-    void appendToList(std::shared_ptr<Node<int,Server>> tail, std::shared_ptr<Node<int,Server>> server_ptr);
+    int getAndRemoveFreeServer(int OS);
+    void appendToList(int OS, std::shared_ptr<Node<int,Server>>& server_ptr);
 public:
     int getID();
     DataCenter(int ID, int num_of_servers);

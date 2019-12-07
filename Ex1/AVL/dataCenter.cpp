@@ -7,7 +7,7 @@
 int DataCenter::assignServer(int server_ID, int OS){
     if(server_ID<0 || server_ID >= this->num_of_servers) throw InvalidServerID();
     if(this->linux_free_head == nullptr && this->windows_free_head == nullptr) throw AllServersAreTaken();
-    Server server = this->servers_array[server_ID]->getData();
+    Server& server = this->servers_array[server_ID]->getData();
     //server is not taken
     if(server.getTaken() == false){
         server.setTaken(true);
@@ -30,34 +30,39 @@ int DataCenter::assignServer(int server_ID, int OS){
     else{
         //OS is linux
         if (OS==0){
-            if (this->linux_free_head != nullptr) return getAndRemoveFreeServer(this->linux_free_head);
+            if (this->linux_free_head != nullptr) return getAndRemoveFreeServer(0);
             else{
                 this->windows_free_head->getData().setOS(0);
                 this->num_of_linux--;
                 this->num_of_windows++;
-                return getAndRemoveFreeServer(this->windows_free_head);
+                return getAndRemoveFreeServer(1);
             }
         }
         //OS is windows
         else{
-            if (this->windows_free_head != nullptr) return getAndRemoveFreeServer(this->windows_free_head);
+            if (this->windows_free_head != nullptr) return getAndRemoveFreeServer(1);
             else{
                 this->linux_free_head->getData().setOS(1);
                 this->num_of_linux++;
                 this->num_of_windows--;
-                return getAndRemoveFreeServer(this->linux_free_head);
+                return getAndRemoveFreeServer(0);
             }
         }
     }
 }
 
-
-int DataCenter::getAndRemoveFreeServer(std::shared_ptr<Node<int,Server>>& list){
-    list->getData().setTaken(true);
-    int assign_ID = list->getData().getID();
-    if(list->getData().getOS()==0) this->linux_free_head=this->linux_free_head->getNext();
+// gets the first free server
+int DataCenter::getAndRemoveFreeServer(int OS){
+    std::shared_ptr<Node<int,Server>> head_ptr;
+    if(OS==0)head_ptr = this->linux_free_head;
+    else  head_ptr = this->windows_free_head;
+    head_ptr->getData().setTaken(true);
+    int assign_ID = head_ptr->getData().getID();
+    if(OS ==0) this->linux_free_head=this->linux_free_head->getNext();
     else this->windows_free_head=this->windows_free_head->getNext();
-    list->setNext(nullptr);
+    // set the new head prev flied to null
+    head_ptr->getNext()->setPrev(nullptr);
+    head_ptr->setNext(nullptr);
     return assign_ID;
 }
 
@@ -88,19 +93,42 @@ void DataCenter::freeServer(int server_ID){
     server_ptr->getData().setTaken(false); //set free
     // os linux
     if(server_ptr->getData().getOS() == 0){
-        appendToList(this->linux_free_tail,server_ptr);
-        this->linux_free_tail = this->linux_free_tail->getNext();
+        appendToList(0,server_ptr);
     }
     // os windows
     else{
-        appendToList(this->windows_free_head,server_ptr);
-        this->windows_free_head = this->windows_free_head->getNext();
+        appendToList(1,server_ptr);
     }
 }
 
-void DataCenter::appendToList(std::shared_ptr<Node<int,Server>> tail, std::shared_ptr<Node<int,Server>> server_ptr){
-    server_ptr->setPrev(tail);
-    tail->setNext(server_ptr);
+void DataCenter::appendToList(int OS, std::shared_ptr<Node<int,Server>>& server_ptr){
+    //linux
+    if(OS==0){
+        // list is empty
+        if(linux_free_head == nullptr){
+            linux_free_head = server_ptr;
+            linux_free_tail = server_ptr;
+        }
+        else{
+            server_ptr->setPrev(linux_free_tail);
+            linux_free_tail->setNext(server_ptr);
+            linux_free_tail = linux_free_tail->getNext();
+        }
+    }
+    //windows
+    else{
+        // list is empty
+        if(windows_free_head == nullptr){
+            windows_free_head = server_ptr;
+            windows_free_tail = server_ptr;
+        }
+        else{
+            server_ptr->setPrev(windows_free_tail);
+            windows_free_tail->setNext(server_ptr);
+            windows_free_tail = windows_free_tail->getNext();
+        }
+    }
+
 }
 
 int DataCenter::getID(){
