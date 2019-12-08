@@ -86,6 +86,7 @@ static bool isInit = false;
 int main(int argc, const char**argv) {
     std::string line;
     std::ifstream myfile ("in1.txt");
+    freopen ("myfile.txt","w",stdout);
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
@@ -97,7 +98,7 @@ int main(int argc, const char**argv) {
     }
 
     else std::cout << "Unable to open file";
-
+    fclose (stdout);
     return 0;
 }
 
