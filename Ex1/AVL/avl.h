@@ -18,7 +18,7 @@ public:
     Avl& operator=(const Avl& avl)= delete;
     void insert(const K& key, const D& data); // Daniel
     void delete_element(const K& key); // Omer
-    std::shared_ptr<Node<K,D>> find(const K& key); // Omer
+    D& find(const K& key); // Omer
     std::shared_ptr<Node<K,D>> getHead();
     int getBF(std::shared_ptr<Node<K,D>> node); // Dainel
     void rotateLL(std::shared_ptr<Node<K,D>> node); // Omer
@@ -101,12 +101,12 @@ void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
     A->calcHeight();
 }
 template <class K, class D>
-std::shared_ptr<Node<K,D>> Avl<K,D>::find(const K& key){
+D& Avl<K,D>::find(const K& key){
     std::shared_ptr<Node<K,D>> nearest = this->find_nearest(key);
     if(nearest== nullptr || nearest->getKey() != key){
         throw Avl<K,D>::KeyNotFound(); //empty tree
     }
-    else return nearest;
+    else return nearest->getData();
 }
 
 template <class K, class D>
@@ -148,6 +148,7 @@ void Avl<K,D>::delete_element(const K& key){
         // path is only one to the left
         if(current == nearest->getLeft()){
             if (nearest->getPapa() != nullptr)fix_relations(nearest->getPapa(),current);
+            else current->setPapa(nullptr); // if the nearest is the root.
             if(nearest->getRight() != nullptr) fix_relations(current,nearest->getRight());
             else current->setRight(nullptr);
             this->fix_BFs(current);
@@ -157,7 +158,8 @@ void Avl<K,D>::delete_element(const K& key){
             std::shared_ptr<Node<K,D>> changed_from = current->getPapa(); // save parent of leaf to fix balance from
             if(current->getLeft() != nullptr) fix_relations(current->getPapa(),current->getLeft());
             else current->getPapa()->setRight(nullptr);
-            fix_relations(nearest->getPapa(),current);
+            if(nearest->getPapa() != nullptr) fix_relations(nearest->getPapa(),current);
+            else current->setPapa(nullptr); // if the nearest is the root
             if(nearest->getRight() != nullptr) fix_relations(current,nearest->getRight());
             else current->setRight(nullptr);
             fix_relations(current,nearest->getLeft());

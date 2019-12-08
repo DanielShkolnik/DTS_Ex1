@@ -6,17 +6,17 @@
 StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, int* assigned_server_ID){
     if((OS!=0 && OS!=1) || !assigned_server_ID) return INVALID_INPUT;
     try{
-        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
-        Key prev_key_linux(DC_ptr->getKey(),DC_ptr->getData().getNumOfLinux());
-        Key prev_key_windows(DC_ptr->getKey(),DC_ptr->getData().getNumOfWindows());
-        *assigned_server_ID = DC_ptr->getData().assignServer(server_ID,OS);
-        Key current_key_linux(DC_ptr->getKey(),DC_ptr->getData().getNumOfLinux());
-        Key current_key_windows(DC_ptr->getKey(),DC_ptr->getData().getNumOfWindows());
-        DataCenter prev_DC=DC_ptr->getData();
+        DataCenter& DC = this->DCs_by_ID.find(DC_ID);
+        Key prev_key_linux(DC.getID(),DC.getNumOfLinux());
+        Key prev_key_windows(DC.getID(),DC.getNumOfWindows());
+        *assigned_server_ID = DC.assignServer(server_ID,OS);
+        Key current_key_linux(DC.getID(),DC.getNumOfLinux());
+        Key current_key_windows(DC.getID(),DC.getNumOfWindows());
+        //DataCenter prev_DC=DC;
         this->DCs_by_NumOfLinux.delete_element(prev_key_linux);
         this->DCs_by_NumOfWindows.delete_element(prev_key_windows);
-        this->DCs_by_NumOfLinux.insert(current_key_linux,prev_DC);
-        this->DCs_by_NumOfWindows.insert(current_key_windows,prev_DC);
+        this->DCs_by_NumOfLinux.insert(current_key_linux,DC);//asd
+        this->DCs_by_NumOfWindows.insert(current_key_windows,DC);//asd
         return SUCCESS;
     }
     catch(DataCenter::InvalidServerID& e){
@@ -36,9 +36,9 @@ StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, in
 StatusType DataCenterManager::RemoveDataCenter(int DC_ID){
     if(DC_ID<=0) return INVALID_INPUT;
     try{
-        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
-        Key prev_key_linux(DC_ptr->getKey(),DC_ptr->getData().getNumOfLinux());
-        Key prev_key_windows(DC_ptr->getKey(),DC_ptr->getData().getNumOfWindows());
+        DataCenter& DC = this->DCs_by_ID.find(DC_ID);
+        Key prev_key_linux(DC.getID(),DC.getNumOfLinux());
+        Key prev_key_windows(DC.getID(),DC.getNumOfWindows());
         this->DCs_by_ID.delete_element(DC_ID);
         this->DCs_by_NumOfLinux.delete_element(prev_key_linux);
         this->DCs_by_NumOfWindows.delete_element(prev_key_windows);
@@ -59,7 +59,7 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
     try{
         *data_centers = (int*)malloc(sizeof(int)*this->num_of_DCs);
         *num_of_data_servers = this->num_of_DCs;
-        AddToArray pred(*data_centers);
+        AddToArray pred(data_centers);
         //linux servers
         if(OS==0){
             inorder<Key,DataCenter,AddToArray>(this->DCs_by_NumOfLinux.getHead(),pred);
@@ -67,6 +67,7 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
         else{
             inorder<Key,DataCenter,AddToArray>(this->DCs_by_NumOfWindows.getHead(),pred);
         }
+
         return SUCCESS;
     }
     catch(std::bad_alloc& e) {
@@ -79,8 +80,8 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
 
 StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
     try{
-        std::shared_ptr<Node<int,DataCenter>> DC_ptr = this->DCs_by_ID.find(DC_ID);
-        DC_ptr->getData().freeServer(server_ID);
+        DataCenter& DC = this->DCs_by_ID.find(DC_ID);
+        DC.freeServer(server_ID);
         return SUCCESS;
     }
     catch(DataCenter::InvalidServerID& e){

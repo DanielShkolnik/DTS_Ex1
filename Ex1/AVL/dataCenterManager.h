@@ -29,13 +29,14 @@ public:
 class AddToArray{
 private:
     int i;
-    int* IDs_array;
+    int** IDs_array;
 public:
     void operator()(const std::shared_ptr<Node<Key,DataCenter>>& node){
-        (this->IDs_array)[i] = node->getData().getID();
+        (this->IDs_array)[0][i] = node->getData().getID();
         i++;
     }
-    explicit AddToArray(int* array):i(0),IDs_array(array){};
+    explicit AddToArray(int** dcs):i(0),IDs_array(dcs){};
+    AddToArray(const AddToArray& a) = delete;
 };
 
 #endif //AVL_DATACENTERMANAGER_H
