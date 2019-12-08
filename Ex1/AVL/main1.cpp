@@ -86,19 +86,24 @@ static bool isInit = false;
 int main(int argc, const char**argv) {
     std::string line;
     std::ifstream myfile ("in1.txt");
-    freopen ("myfile.txt","w",stdout);
+    //freopen ("myfile.txt","w",stdout);
+    int i = 1;
     if (myfile.is_open())
     {
         while ( getline (myfile,line) )
         {
+            if(i==35){
+                int j=0;
+            }
             if (parser(line.c_str()) == error)
                 break;
+            i++;
         }
         myfile.close();
     }
 
     else std::cout << "Unable to open file";
-    fclose (stdout);
+    //fclose (stdout);
     return 0;
 }
 
