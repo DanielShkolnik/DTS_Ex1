@@ -135,9 +135,10 @@ void Avl<K,D>::delete_element(const K& key){
     }
     //no left son but not leaf => right son and papa exists
     else if(nearest->getLeft()== nullptr){
-        fix_relations(nearest->getPapa(),nearest->getRight());
-        fix_BFs(nearest->getPapa());
-        this->update_head(nearest->getPapa());
+        if(nearest->getPapa() != nullptr) fix_relations(nearest->getPapa(),nearest->getRight());
+        else nearest->getRight()->setPapa(nullptr);
+        fix_BFs(nearest->getRight());
+        this->update_head(nearest->getRight());
     }
     //find the left->right->right....son
     else{
