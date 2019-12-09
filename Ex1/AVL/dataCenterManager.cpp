@@ -105,7 +105,6 @@ StatusType DataCenterManager::AddDataCenter(int DC_ID, int num_of_servers){
         Key key_linux(DC_ID,num_of_servers);
         Key key_windows(DC_ID,0);
         std::shared_ptr<DataCenter> dc(new DataCenter(DC_ID,num_of_servers));
-        //DataCenter dc(DC_ID,num_of_servers);
         this->DCs_by_ID.insert(DC_ID,dc);
         this->DCs_by_NumOfLinux.insert(key_linux,dc);
         this->DCs_by_NumOfWindows.insert(key_windows,dc);
