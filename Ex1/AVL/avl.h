@@ -16,9 +16,9 @@ public:
     ~Avl();
     Avl(const Avl& avl)= delete;
     Avl& operator=(const Avl& avl)= delete;
-    void insert(const K& key, const D& data); // Daniel
+    void insert(const K& key, std::shared_ptr<D> data); // Daniel
     void delete_element(const K& key); // Omer
-    D& find(const K& key); // Omer
+    std::shared_ptr<D> find(const K& key); // Omer
     std::shared_ptr<Node<K,D>> getHead();
     int getBF(std::shared_ptr<Node<K,D>> node); // Dainel
     void rotateLL(std::shared_ptr<Node<K,D>> node); // Omer
@@ -32,7 +32,7 @@ public:
 };
 
 template <class K, class D>
-void Avl<K,D>::insert(const K& key, const D& data){
+void Avl<K,D>::insert(const K& key, std::shared_ptr<D> data){
     std::shared_ptr<Node<K,D>> nearest_node=this->find_nearest(key);
     std::shared_ptr<Node<K,D>> new_node_ptr = std::shared_ptr<Node<K,D>>(new Node<K,D>(key,data,nearest_node));
     if(nearest_node == nullptr){
@@ -101,7 +101,7 @@ void Avl<K,D>::rotateLR(std::shared_ptr<Node<K,D>> C){
     A->calcHeight();
 }
 template <class K, class D>
-D& Avl<K,D>::find(const K& key){
+std::shared_ptr<D> Avl<K,D>::find(const K& key){
     std::shared_ptr<Node<K,D>> nearest = this->find_nearest(key);
     if(nearest== nullptr || nearest->getKey() != key){
         throw Avl<K,D>::KeyNotFound(); //empty tree

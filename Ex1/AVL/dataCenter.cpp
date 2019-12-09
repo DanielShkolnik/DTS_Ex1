@@ -7,13 +7,13 @@
 int DataCenter::assignServer(int server_ID, int OS){
     if(server_ID<0 || server_ID >= this->num_of_servers) throw InvalidServerID();
     if(this->linux_free_head == nullptr && this->windows_free_head == nullptr) throw AllServersAreTaken();
-    Server& server = this->servers_array[server_ID]->getData();
+    std::shared_ptr<Server> server = this->servers_array[server_ID]->getData();
     //server is not taken
-    if(server.getTaken() == false){
-        server.setTaken(true);
-        int prev_OS=server.getOS();
+    if(server->getTaken() == false){
+        server->setTaken(true);
+        int prev_OS=server->getOS();
         if(prev_OS!=OS){
-            server.setOS(OS);
+            server->setOS(OS);
             if(OS==0){
                 this->num_of_linux++;
                 this->num_of_windows--;
@@ -24,7 +24,7 @@ int DataCenter::assignServer(int server_ID, int OS){
             }
         }
         remove_from_list(prev_OS,server_ID);
-        return server.getID();
+        return server->getID();
     }
     //server is taken
     else{
@@ -32,7 +32,7 @@ int DataCenter::assignServer(int server_ID, int OS){
         if (OS==0){
             if (this->linux_free_head != nullptr) return getAndRemoveFreeServer(0);
             else{
-                this->windows_free_head->getData().setOS(0);
+                this->windows_free_head->getData()->setOS(0);
                 this->num_of_linux++;
                 this->num_of_windows--;
                 return getAndRemoveFreeServer(1);
@@ -42,7 +42,7 @@ int DataCenter::assignServer(int server_ID, int OS){
         else{
             if (this->windows_free_head != nullptr) return getAndRemoveFreeServer(1);
             else{
-                this->linux_free_head->getData().setOS(1);
+                this->linux_free_head->getData()->setOS(1);
                 this->num_of_linux--;
                 this->num_of_windows++;
                 return getAndRemoveFreeServer(0);
@@ -56,8 +56,8 @@ int DataCenter::getAndRemoveFreeServer(int OS){
     std::shared_ptr<Node<int,Server>> head_ptr;
     if(OS==0)head_ptr = this->linux_free_head;
     else  head_ptr = this->windows_free_head;
-    head_ptr->getData().setTaken(true);
-    int assign_ID = head_ptr->getData().getID();
+    head_ptr->getData()->setTaken(true);
+    int assign_ID = head_ptr->getData()->getID();
     if(OS ==0) this->linux_free_head=this->linux_free_head->getNext();
     else this->windows_free_head=this->windows_free_head->getNext();
     // set the new head prev flied to null
@@ -89,10 +89,10 @@ void DataCenter::freeServer(int server_ID){
     if(server_ID >= this->num_of_servers || server_ID < 0) throw InvalidServerID();
     std::shared_ptr<Node<int,Server>> server_ptr = this->servers_array[server_ID];
     // if server is already free dont append it to free list
-    if(!(server_ptr->getData().getTaken())) throw ServerIsAlreadyFree();
-    server_ptr->getData().setTaken(false); //set free
+    if(!(server_ptr->getData()->getTaken())) throw ServerIsAlreadyFree();
+    server_ptr->getData()->setTaken(false); //set free
     // os linux
-    if(server_ptr->getData().getOS() == 0){
+    if(server_ptr->getData()->getOS() == 0){
         appendToList(0,server_ptr);
     }
     // os windows
@@ -146,12 +146,12 @@ int DataCenter::getNumOfWindows(){
 
 DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std::shared_ptr<Node<int,Server>>[num_of_servers]),windows_free_head(nullptr)
                         ,windows_free_tail(nullptr),num_of_linux(num_of_servers),num_of_windows(0),num_of_servers(num_of_servers){
-    Server server(0,0);
+    std::shared_ptr<Server> server(new Server(0,0));
     std::shared_ptr<Node<int,Server>> current_server_ptr(new Node<int,Server>(0,server, nullptr, nullptr));
     this->servers_array[0]=current_server_ptr;
     this->linux_free_head=current_server_ptr;
     for(int i=1; i<num_of_servers; i++){
-        server=Server(i,0);
+        server = std::shared_ptr<Server>(new Server(i,0));
         std::shared_ptr<Node<int,Server>> next_server_ptr(new Node<int,Server>(i,server, current_server_ptr, nullptr));
         current_server_ptr->setNext(next_server_ptr);
         this->servers_array[i]=next_server_ptr;
@@ -172,6 +172,25 @@ DataCenter::~DataCenter(){
     this->servers_array = nullptr;
 }
 
+void DataCenter::deleteList(){
+    std::shared_ptr<Node<int,Server>> current_w = this->windows_free_head;
+    while (current_w){
+        std::shared_ptr<Node<int,Server>> prev_w = current_w;
+        current_w = current_w->getNext();
+        prev_w->setPrev(nullptr);
+        prev_w->setNext(nullptr);
+    }
+
+    std::shared_ptr<Node<int,Server>> current_l = this->linux_free_head;
+    while (current_l){
+        std::shared_ptr<Node<int,Server>> prev_l = current_l;
+        current_l = current_l->getNext();
+        prev_l->setPrev(nullptr);
+        prev_l->setNext(nullptr);
+    }
+}
+
+/*
 DataCenter::DataCenter(const DataCenter& dc){
     this->ID = dc.ID;
     this->num_of_linux = dc.num_of_linux;
@@ -200,23 +219,7 @@ void fix_relations_9000(std::shared_ptr<Node<int,Server>>& dc1, std::shared_ptr<
     dc2->setPrev(dc1);
 }
 
-void DataCenter::deleteList(){
-    std::shared_ptr<Node<int,Server>> current_w = this->windows_free_head;
-    while (current_w){
-        std::shared_ptr<Node<int,Server>> prev_w = current_w;
-        current_w = current_w->getNext();
-        prev_w->setPrev(nullptr);
-        prev_w->setNext(nullptr);
-    }
 
-    std::shared_ptr<Node<int,Server>> current_l = this->linux_free_head;
-    while (current_l){
-        std::shared_ptr<Node<int,Server>> prev_l = current_l;
-        current_l = current_l->getNext();
-        prev_l->setPrev(nullptr);
-        prev_l->setNext(nullptr);
-    }
-}
 
 void DataCenter::copyArrayAndList(const DataCenter& dc){
     for(int i=0; i<dc.num_of_servers; i++){
@@ -250,3 +253,4 @@ void DataCenter::copyArrayAndList(const DataCenter& dc){
     else this->windows_free_tail = nullptr;
 }
 
+*/

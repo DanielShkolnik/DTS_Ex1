@@ -6,16 +6,16 @@ template <class K, class D>
 class Node{
 private :
     K key;
-    D* data;
+    std::shared_ptr<D> data;
     std::shared_ptr<Node> left;
     std::shared_ptr<Node> right;
     std::shared_ptr<Node> papa;
     int height;
 public:
     Node()= delete;
-    Node(K key, D data,std::shared_ptr<Node> papa);
+    Node(K key, std::shared_ptr<D> data,std::shared_ptr<Node> papa);
 
-    ~Node();
+    ~Node() = default;
     Node(const Node&)= delete;
     std::shared_ptr<Node> operator=(const Node&)= delete;
     void calcHeight();
@@ -23,7 +23,7 @@ public:
     void setRight(const std::shared_ptr<Node<K,D>>& right);
     int getHeight() const;
     const K& getKey() const;
-    D& getData();
+    std::shared_ptr<D> getData();
     void setData(const D& data);
     std::shared_ptr<Node> getLeft();
     std::shared_ptr<Node> getRight();
@@ -36,8 +36,8 @@ public:
     std::shared_ptr<Node> getPrev();
     void setPrev(const std::shared_ptr<Node>& prev);
     void setNext(const std::shared_ptr<Node>& next);
-    Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next);
-    Node(K key, D data);
+    Node(K key, std::shared_ptr<D> data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next);
+    Node(K key, std::shared_ptr<D> data);
 };
 
 static int max(int a, int b){
@@ -46,13 +46,14 @@ static int max(int a, int b){
 }
 
 template <class K, class D>
-Node<K,D>::Node(K key, D data, std::shared_ptr<Node<K,D>> papa):key(key),data(new D(data)),papa(papa),height(1){}
+Node<K,D>::Node(K key, std::shared_ptr<D> data_ptr, std::shared_ptr<Node<K,D>> papa):key(key),data(data_ptr),papa(papa),height(1){}
 
+/*
 template <class K, class D>
 Node<K,D>::~Node(){
     delete data;
 }
-
+*/
 template <class K, class D>
 void Node<K,D>::calcHeight(){
     if(this->left== nullptr && this->right== nullptr)this->height = 1; //leaf
@@ -82,8 +83,8 @@ const K& Node<K,D>::getKey() const{
 }
 
 template <class K, class D>
-D& Node<K,D>::getData(){
-    return *(this->data);
+std::shared_ptr<D> Node<K,D>::getData(){
+    return this->data;
 }
 template <class K, class D>
 void Node<K,D>::setData(const D& data){
@@ -141,8 +142,8 @@ void Node<K,D>::setPrev(const std::shared_ptr<Node<K, D>>& prev){
 }
 
 template <class K, class D>
-Node<K,D>::Node(K key, D data,std::shared_ptr<Node> prev,std::shared_ptr<Node> next):key(key),data(new D(data)),left(prev),right(next),height(1){}
+Node<K,D>::Node(K key, std::shared_ptr<D> data_ptr,std::shared_ptr<Node> prev,std::shared_ptr<Node> next):key(key),data(data_ptr),left(prev),right(next),height(1){}
 template <class K, class D>
-Node<K,D>::Node(K key, D data):key(key),data(new D(data)),left(nullptr),right(nullptr),height(1){}
+Node<K,D>::Node(K key, std::shared_ptr<D> data_ptr):key(key),data(data_ptr),left(nullptr),right(nullptr),height(1){}
 
 #endif

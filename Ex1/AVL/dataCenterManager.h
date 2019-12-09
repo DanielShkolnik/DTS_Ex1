@@ -32,7 +32,7 @@ private:
     int** IDs_array;
 public:
     void operator()(const std::shared_ptr<Node<Key,DataCenter>>& node){
-        (this->IDs_array)[0][i] = node->getData().getID();
+        (this->IDs_array)[0][i] = node->getData()->getID();
         i++;
     }
     explicit AddToArray(int** dcs):i(0),IDs_array(dcs){};
