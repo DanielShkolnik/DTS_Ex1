@@ -162,9 +162,6 @@ DataCenter::DataCenter(int ID, int num_of_servers):ID(ID), servers_array(new std
 
 
 DataCenter::~DataCenter(){
-    for(int i=0;i<this->num_of_servers;i++){
-        this->servers_array[i] = nullptr;
-    }
     delete[] this->servers_array;
     this->deleteList();
     this->linux_free_head = nullptr;
