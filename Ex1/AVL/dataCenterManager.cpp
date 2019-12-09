@@ -4,7 +4,7 @@
 
 #include "dataCenterManager.h"
 StatusType DataCenterManager::RequestServer(int DC_ID, int server_ID, int OS, int* assigned_server_ID){
-    if((OS!=0 && OS!=1) || !assigned_server_ID) return INVALID_INPUT;
+    if((OS!=0 && OS!=1) || !assigned_server_ID || DC_ID <=0) return INVALID_INPUT;
     try{
         std::shared_ptr<DataCenter> DC = this->DCs_by_ID.find(DC_ID);
         Key prev_key_linux(DC->getID(),DC->getNumOfLinux());
@@ -79,6 +79,7 @@ StatusType DataCenterManager::GetDataCentersByOs(int OS, int** data_centers, int
 
 
 StatusType DataCenterManager::FreeServer(int DC_ID, int server_ID){
+    if(DC_ID<=0) return INVALID_INPUT;
     try{
         std::shared_ptr<DataCenter> DC = this->DCs_by_ID.find(DC_ID);
         DC->freeServer(server_ID);

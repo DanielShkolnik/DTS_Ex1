@@ -92,7 +92,7 @@ int main(int argc, const char**argv) {
     {
         while ( getline (myfile,line) )
         {
-            if(i==18){
+            if(i==108){
                 int j=0;
             }
             if (parser(line.c_str()) == error)
